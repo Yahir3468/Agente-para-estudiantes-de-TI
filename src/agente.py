@@ -98,11 +98,11 @@ class AgenteEstudianteTI:
             Lista de cursos que enseñan la habilidad
         """
         habilidad_lower = habilidad.lower()
-        curso_ids = self.habilidades_cursos.get(habilidad_lower, [])
+        curso_ids = list(self.habilidades_cursos.get(habilidad_lower, []))
         
         # También buscar en habilidades que contengan el término
         for hab, ids in self.habilidades_cursos.items():
-            if habilidad_lower in hab and hab not in self.habilidades_cursos.get(habilidad_lower, []):
+            if habilidad_lower in hab:
                 curso_ids.extend([id_ for id_ in ids if id_ not in curso_ids])
         
         return [self.cursos[id_] for id_ in curso_ids if id_ in self.cursos]

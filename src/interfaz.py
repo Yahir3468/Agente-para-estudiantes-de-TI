@@ -5,7 +5,10 @@ Esta interfaz permite a los estudiantes interactuar con el agente de manera
 sencilla a través de línea de comandos.
 """
 
-from agente import AgenteEstudianteTI
+try:
+    from agente import AgenteEstudianteTI
+except ImportError:
+    from .agente import AgenteEstudianteTI
 
 
 def mostrar_menu_principal():
