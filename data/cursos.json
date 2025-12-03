@@ -1,0 +1,304 @@
+{
+  "categorias": [
+    {
+      "id": "programacion",
+      "nombre": "Programación",
+      "descripcion": "Cursos de desarrollo de software y lenguajes de programación",
+      "cursos": [
+        {
+          "id": "prog-001",
+          "nombre": "Introducción a Python",
+          "nivel": "basico",
+          "duracion_horas": 15,
+          "descripcion": "Fundamentos de programación con Python",
+          "habilidades": ["variables", "estructuras de control", "funciones", "listas"],
+          "requisitos": [],
+          "url": "https://ejemplo.com/python-basico"
+        },
+        {
+          "id": "prog-002",
+          "nombre": "Python Intermedio",
+          "nivel": "intermedio",
+          "duracion_horas": 20,
+          "descripcion": "Programación orientada a objetos y manejo de archivos en Python",
+          "habilidades": ["POO", "archivos", "excepciones", "modulos"],
+          "requisitos": ["prog-001"],
+          "url": "https://ejemplo.com/python-intermedio"
+        },
+        {
+          "id": "prog-003",
+          "nombre": "Desarrollo Web con Flask",
+          "nivel": "intermedio",
+          "duracion_horas": 25,
+          "descripcion": "Creación de aplicaciones web con Flask",
+          "habilidades": ["flask", "apis", "templates", "bases de datos"],
+          "requisitos": ["prog-002"],
+          "url": "https://ejemplo.com/flask"
+        },
+        {
+          "id": "prog-004",
+          "nombre": "JavaScript Básico",
+          "nivel": "basico",
+          "duracion_horas": 18,
+          "descripcion": "Fundamentos de JavaScript para desarrollo web",
+          "habilidades": ["variables", "funciones", "DOM", "eventos"],
+          "requisitos": [],
+          "url": "https://ejemplo.com/javascript-basico"
+        },
+        {
+          "id": "prog-005",
+          "nombre": "React.js Fundamental",
+          "nivel": "intermedio",
+          "duracion_horas": 30,
+          "descripcion": "Desarrollo de interfaces con React",
+          "habilidades": ["componentes", "hooks", "estado", "props"],
+          "requisitos": ["prog-004"],
+          "url": "https://ejemplo.com/react"
+        }
+      ]
+    },
+    {
+      "id": "bases_datos",
+      "nombre": "Bases de Datos",
+      "descripcion": "Cursos de diseño y gestión de bases de datos",
+      "cursos": [
+        {
+          "id": "bd-001",
+          "nombre": "Fundamentos de Bases de Datos",
+          "nivel": "basico",
+          "duracion_horas": 12,
+          "descripcion": "Conceptos fundamentales de bases de datos relacionales",
+          "habilidades": ["modelo relacional", "normalización", "diagramas ER"],
+          "requisitos": [],
+          "url": "https://ejemplo.com/bd-fundamentos"
+        },
+        {
+          "id": "bd-002",
+          "nombre": "SQL para Principiantes",
+          "nivel": "basico",
+          "duracion_horas": 15,
+          "descripcion": "Consultas y manipulación de datos con SQL",
+          "habilidades": ["SELECT", "INSERT", "UPDATE", "DELETE", "JOINs"],
+          "requisitos": ["bd-001"],
+          "url": "https://ejemplo.com/sql-basico"
+        },
+        {
+          "id": "bd-003",
+          "nombre": "MySQL Avanzado",
+          "nivel": "avanzado",
+          "duracion_horas": 20,
+          "descripcion": "Administración y optimización de MySQL",
+          "habilidades": ["índices", "procedimientos almacenados", "triggers", "optimización"],
+          "requisitos": ["bd-002"],
+          "url": "https://ejemplo.com/mysql-avanzado"
+        },
+        {
+          "id": "bd-004",
+          "nombre": "MongoDB Básico",
+          "nivel": "intermedio",
+          "duracion_horas": 18,
+          "descripcion": "Bases de datos NoSQL con MongoDB",
+          "habilidades": ["documentos", "colecciones", "consultas", "agregaciones"],
+          "requisitos": ["bd-001"],
+          "url": "https://ejemplo.com/mongodb"
+        }
+      ]
+    },
+    {
+      "id": "redes",
+      "nombre": "Redes y Comunicaciones",
+      "descripcion": "Cursos de infraestructura de redes",
+      "cursos": [
+        {
+          "id": "red-001",
+          "nombre": "Fundamentos de Redes",
+          "nivel": "basico",
+          "duracion_horas": 20,
+          "descripcion": "Conceptos básicos de redes de computadoras",
+          "habilidades": ["TCP/IP", "modelo OSI", "direccionamiento IP", "subnetting"],
+          "requisitos": [],
+          "url": "https://ejemplo.com/redes-fundamentos"
+        },
+        {
+          "id": "red-002",
+          "nombre": "Configuración de Routers y Switches",
+          "nivel": "intermedio",
+          "duracion_horas": 25,
+          "descripcion": "Configuración de equipos de red Cisco",
+          "habilidades": ["CLI Cisco", "VLANs", "routing", "switching"],
+          "requisitos": ["red-001"],
+          "url": "https://ejemplo.com/cisco-basico"
+        },
+        {
+          "id": "red-003",
+          "nombre": "Seguridad en Redes",
+          "nivel": "avanzado",
+          "duracion_horas": 30,
+          "descripcion": "Implementación de seguridad en redes",
+          "habilidades": ["firewalls", "VPN", "IDS/IPS", "encriptación"],
+          "requisitos": ["red-002"],
+          "url": "https://ejemplo.com/seguridad-redes"
+        }
+      ]
+    },
+    {
+      "id": "ciberseguridad",
+      "nombre": "Ciberseguridad",
+      "descripcion": "Cursos de seguridad informática",
+      "cursos": [
+        {
+          "id": "seg-001",
+          "nombre": "Introducción a la Ciberseguridad",
+          "nivel": "basico",
+          "duracion_horas": 15,
+          "descripcion": "Conceptos fundamentales de seguridad informática",
+          "habilidades": ["amenazas", "vulnerabilidades", "controles de seguridad"],
+          "requisitos": [],
+          "url": "https://ejemplo.com/ciberseguridad-intro"
+        },
+        {
+          "id": "seg-002",
+          "nombre": "Ethical Hacking Básico",
+          "nivel": "intermedio",
+          "duracion_horas": 35,
+          "descripcion": "Técnicas de hacking ético y pentesting",
+          "habilidades": ["reconocimiento", "escaneo", "explotación", "post-explotación"],
+          "requisitos": ["seg-001", "red-001"],
+          "url": "https://ejemplo.com/ethical-hacking"
+        },
+        {
+          "id": "seg-003",
+          "nombre": "Análisis de Malware",
+          "nivel": "avanzado",
+          "duracion_horas": 40,
+          "descripcion": "Análisis estático y dinámico de malware",
+          "habilidades": ["análisis estático", "análisis dinámico", "ingeniería inversa"],
+          "requisitos": ["seg-002"],
+          "url": "https://ejemplo.com/malware-analysis"
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "nombre": "Computación en la Nube",
+      "descripcion": "Cursos de servicios cloud",
+      "cursos": [
+        {
+          "id": "cloud-001",
+          "nombre": "Fundamentos de Cloud Computing",
+          "nivel": "basico",
+          "duracion_horas": 12,
+          "descripcion": "Conceptos básicos de computación en la nube",
+          "habilidades": ["IaaS", "PaaS", "SaaS", "modelos de despliegue"],
+          "requisitos": [],
+          "url": "https://ejemplo.com/cloud-fundamentos"
+        },
+        {
+          "id": "cloud-002",
+          "nombre": "AWS para Principiantes",
+          "nivel": "intermedio",
+          "duracion_horas": 25,
+          "descripcion": "Servicios básicos de Amazon Web Services",
+          "habilidades": ["EC2", "S3", "RDS", "IAM"],
+          "requisitos": ["cloud-001"],
+          "url": "https://ejemplo.com/aws-basico"
+        },
+        {
+          "id": "cloud-003",
+          "nombre": "Docker y Contenedores",
+          "nivel": "intermedio",
+          "duracion_horas": 20,
+          "descripcion": "Containerización con Docker",
+          "habilidades": ["contenedores", "imágenes", "docker-compose", "networking"],
+          "requisitos": ["cloud-001"],
+          "url": "https://ejemplo.com/docker"
+        },
+        {
+          "id": "cloud-004",
+          "nombre": "Kubernetes Básico",
+          "nivel": "avanzado",
+          "duracion_horas": 30,
+          "descripcion": "Orquestación de contenedores con Kubernetes",
+          "habilidades": ["pods", "servicios", "deployments", "ingress"],
+          "requisitos": ["cloud-003"],
+          "url": "https://ejemplo.com/kubernetes"
+        }
+      ]
+    },
+    {
+      "id": "datos",
+      "nombre": "Ciencia de Datos",
+      "descripcion": "Cursos de análisis y ciencia de datos",
+      "cursos": [
+        {
+          "id": "data-001",
+          "nombre": "Introducción al Análisis de Datos",
+          "nivel": "basico",
+          "duracion_horas": 15,
+          "descripcion": "Fundamentos del análisis de datos",
+          "habilidades": ["estadística básica", "visualización", "Excel"],
+          "requisitos": [],
+          "url": "https://ejemplo.com/analisis-datos-intro"
+        },
+        {
+          "id": "data-002",
+          "nombre": "Python para Ciencia de Datos",
+          "nivel": "intermedio",
+          "duracion_horas": 25,
+          "descripcion": "Análisis de datos con Python, Pandas y NumPy",
+          "habilidades": ["pandas", "numpy", "matplotlib", "limpieza de datos"],
+          "requisitos": ["data-001", "prog-001"],
+          "url": "https://ejemplo.com/python-data-science"
+        },
+        {
+          "id": "data-003",
+          "nombre": "Machine Learning Básico",
+          "nivel": "avanzado",
+          "duracion_horas": 40,
+          "descripcion": "Introducción al aprendizaje automático",
+          "habilidades": ["regresión", "clasificación", "clustering", "scikit-learn"],
+          "requisitos": ["data-002"],
+          "url": "https://ejemplo.com/machine-learning"
+        }
+      ]
+    }
+  ],
+  "perfiles_carrera": [
+    {
+      "id": "desarrollador_web",
+      "nombre": "Desarrollador Web Full Stack",
+      "descripcion": "Desarrolla aplicaciones web completas (frontend y backend)",
+      "cursos_recomendados": ["prog-001", "prog-002", "prog-003", "prog-004", "prog-005", "bd-001", "bd-002"]
+    },
+    {
+      "id": "admin_redes",
+      "nombre": "Administrador de Redes",
+      "descripcion": "Gestiona y mantiene la infraestructura de redes",
+      "cursos_recomendados": ["red-001", "red-002", "red-003", "seg-001"]
+    },
+    {
+      "id": "cientifico_datos",
+      "nombre": "Científico de Datos",
+      "descripcion": "Analiza grandes volúmenes de datos para extraer insights",
+      "cursos_recomendados": ["prog-001", "prog-002", "bd-001", "bd-002", "data-001", "data-002", "data-003"]
+    },
+    {
+      "id": "especialista_ciberseguridad",
+      "nombre": "Especialista en Ciberseguridad",
+      "descripcion": "Protege sistemas y redes contra amenazas cibernéticas",
+      "cursos_recomendados": ["red-001", "red-002", "seg-001", "seg-002", "seg-003"]
+    },
+    {
+      "id": "ingeniero_cloud",
+      "nombre": "Ingeniero Cloud",
+      "descripcion": "Diseña y gestiona infraestructura en la nube",
+      "cursos_recomendados": ["cloud-001", "cloud-002", "cloud-003", "cloud-004", "red-001"]
+    },
+    {
+      "id": "admin_bd",
+      "nombre": "Administrador de Bases de Datos",
+      "descripcion": "Gestiona y optimiza sistemas de bases de datos",
+      "cursos_recomendados": ["bd-001", "bd-002", "bd-003", "bd-004", "prog-001"]
+    }
+  ]
+}
