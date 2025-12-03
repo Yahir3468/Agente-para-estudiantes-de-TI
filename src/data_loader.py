@@ -4,7 +4,6 @@ Maneja la carga de cursos y base de conocimiento desde archivos JSON.
 """
 
 import json
-import os
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 

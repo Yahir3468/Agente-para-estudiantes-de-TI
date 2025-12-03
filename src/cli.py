@@ -8,7 +8,6 @@ Uso:
 """
 
 import sys
-import json
 from typing import Optional
 from src.agente import AgenteEstudiantes
 

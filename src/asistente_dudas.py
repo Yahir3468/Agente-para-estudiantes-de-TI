@@ -2,6 +2,8 @@
 Asistente de resolución de dudas para estudiantes de TI.
 """
 
+import random
+import re
 from typing import Dict, List, Any, Optional
 from . import data_loader
 
@@ -108,8 +110,6 @@ class AsistenteDudas:
     
     def _extraer_palabras_clave(self, texto: str) -> List[str]:
         """Extrae palabras clave de un texto, ignorando palabras comunes."""
-        import re
-        
         palabras_comunes = {
             "que", "qué", "es", "un", "una", "el", "la", "los", "las",
             "como", "cómo", "para", "por", "en", "de", "del", "al",
@@ -186,7 +186,6 @@ class AsistenteDudas:
     
     def obtener_tip_estudio(self) -> Dict[str, str]:
         """Retorna un tip de estudio aleatorio."""
-        import random
         tips = self.base_conocimiento.get("tips_estudio", [])
         if tips:
             return random.choice(tips)
