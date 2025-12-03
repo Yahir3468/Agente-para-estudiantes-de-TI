@@ -1,0 +1,216 @@
+{
+  "cursos": [
+    {
+      "id": "python-basico",
+      "nombre": "Python Básico",
+      "categoria": "Programación",
+      "nivel": "Principiante",
+      "duracion_horas": 10,
+      "descripcion": "Aprende los fundamentos de Python, el lenguaje más popular en TI.",
+      "temas": ["Variables", "Estructuras de control", "Funciones", "Listas y diccionarios"],
+      "habilidades": ["Python", "Lógica de programación"],
+      "prerequisitos": [],
+      "url": "https://ejemplo.com/cursos/python-basico"
+    },
+    {
+      "id": "python-intermedio",
+      "nombre": "Python Intermedio",
+      "categoria": "Programación",
+      "nivel": "Intermedio",
+      "duracion_horas": 15,
+      "descripcion": "Profundiza en Python con POO, manejo de archivos y módulos.",
+      "temas": ["POO", "Manejo de archivos", "Módulos", "Excepciones"],
+      "habilidades": ["Python avanzado", "POO"],
+      "prerequisitos": ["python-basico"],
+      "url": "https://ejemplo.com/cursos/python-intermedio"
+    },
+    {
+      "id": "html-css-basico",
+      "nombre": "HTML y CSS Básico",
+      "categoria": "Desarrollo Web",
+      "nivel": "Principiante",
+      "duracion_horas": 8,
+      "descripcion": "Aprende a crear páginas web con HTML y CSS.",
+      "temas": ["Etiquetas HTML", "CSS básico", "Diseño responsive", "Flexbox"],
+      "habilidades": ["HTML", "CSS", "Diseño web"],
+      "prerequisitos": [],
+      "url": "https://ejemplo.com/cursos/html-css-basico"
+    },
+    {
+      "id": "javascript-basico",
+      "nombre": "JavaScript Básico",
+      "categoria": "Desarrollo Web",
+      "nivel": "Principiante",
+      "duracion_horas": 12,
+      "descripcion": "Aprende JavaScript para hacer páginas web interactivas.",
+      "temas": ["Variables", "Funciones", "DOM", "Eventos"],
+      "habilidades": ["JavaScript", "Programación web"],
+      "prerequisitos": ["html-css-basico"],
+      "url": "https://ejemplo.com/cursos/javascript-basico"
+    },
+    {
+      "id": "react-basico",
+      "nombre": "React Básico",
+      "categoria": "Desarrollo Web",
+      "nivel": "Intermedio",
+      "duracion_horas": 15,
+      "descripcion": "Aprende React para crear aplicaciones web modernas.",
+      "temas": ["Componentes", "Props", "State", "Hooks"],
+      "habilidades": ["React", "Frontend"],
+      "prerequisitos": ["javascript-basico"],
+      "url": "https://ejemplo.com/cursos/react-basico"
+    },
+    {
+      "id": "sql-basico",
+      "nombre": "SQL Básico",
+      "categoria": "Bases de Datos",
+      "nivel": "Principiante",
+      "duracion_horas": 8,
+      "descripcion": "Aprende SQL para gestionar bases de datos relacionales.",
+      "temas": ["SELECT", "INSERT", "UPDATE", "DELETE", "JOINs"],
+      "habilidades": ["SQL", "Bases de datos"],
+      "prerequisitos": [],
+      "url": "https://ejemplo.com/cursos/sql-basico"
+    },
+    {
+      "id": "git-basico",
+      "nombre": "Git y GitHub Básico",
+      "categoria": "Control de Versiones",
+      "nivel": "Principiante",
+      "duracion_horas": 5,
+      "descripcion": "Aprende a usar Git y GitHub para control de versiones.",
+      "temas": ["Repositorios", "Commits", "Branches", "Pull requests"],
+      "habilidades": ["Git", "GitHub", "Control de versiones"],
+      "prerequisitos": [],
+      "url": "https://ejemplo.com/cursos/git-basico"
+    },
+    {
+      "id": "linux-basico",
+      "nombre": "Linux Básico",
+      "categoria": "Sistemas Operativos",
+      "nivel": "Principiante",
+      "duracion_horas": 8,
+      "descripcion": "Aprende los fundamentos de Linux y la línea de comandos.",
+      "temas": ["Terminal", "Sistema de archivos", "Permisos", "Scripts bash"],
+      "habilidades": ["Linux", "Línea de comandos"],
+      "prerequisitos": [],
+      "url": "https://ejemplo.com/cursos/linux-basico"
+    },
+    {
+      "id": "redes-basico",
+      "nombre": "Redes Básico",
+      "categoria": "Redes",
+      "nivel": "Principiante",
+      "duracion_horas": 10,
+      "descripcion": "Aprende los fundamentos de redes de computadoras.",
+      "temas": ["Modelo OSI", "TCP/IP", "DNS", "HTTP"],
+      "habilidades": ["Redes", "Protocolos"],
+      "prerequisitos": [],
+      "url": "https://ejemplo.com/cursos/redes-basico"
+    },
+    {
+      "id": "ciberseguridad-intro",
+      "nombre": "Introducción a Ciberseguridad",
+      "categoria": "Ciberseguridad",
+      "nivel": "Principiante",
+      "duracion_horas": 10,
+      "descripcion": "Aprende los fundamentos de ciberseguridad.",
+      "temas": ["Amenazas", "Vulnerabilidades", "Criptografía básica", "Seguridad en redes"],
+      "habilidades": ["Ciberseguridad", "Seguridad informática"],
+      "prerequisitos": ["redes-basico"],
+      "url": "https://ejemplo.com/cursos/ciberseguridad-intro"
+    },
+    {
+      "id": "cloud-aws-intro",
+      "nombre": "Introducción a AWS",
+      "categoria": "Cloud Computing",
+      "nivel": "Intermedio",
+      "duracion_horas": 12,
+      "descripcion": "Aprende los servicios básicos de Amazon Web Services.",
+      "temas": ["EC2", "S3", "RDS", "Lambda"],
+      "habilidades": ["AWS", "Cloud Computing"],
+      "prerequisitos": ["linux-basico"],
+      "url": "https://ejemplo.com/cursos/cloud-aws-intro"
+    },
+    {
+      "id": "docker-basico",
+      "nombre": "Docker Básico",
+      "categoria": "DevOps",
+      "nivel": "Intermedio",
+      "duracion_horas": 8,
+      "descripcion": "Aprende a usar contenedores con Docker.",
+      "temas": ["Imágenes", "Contenedores", "Dockerfile", "Docker Compose"],
+      "habilidades": ["Docker", "Contenedores"],
+      "prerequisitos": ["linux-basico"],
+      "url": "https://ejemplo.com/cursos/docker-basico"
+    },
+    {
+      "id": "ia-intro",
+      "nombre": "Introducción a Inteligencia Artificial",
+      "categoria": "Inteligencia Artificial",
+      "nivel": "Intermedio",
+      "duracion_horas": 15,
+      "descripcion": "Aprende los fundamentos de IA y Machine Learning.",
+      "temas": ["ML básico", "Redes neuronales", "Clasificación", "Regresión"],
+      "habilidades": ["IA", "Machine Learning"],
+      "prerequisitos": ["python-intermedio"],
+      "url": "https://ejemplo.com/cursos/ia-intro"
+    },
+    {
+      "id": "api-rest",
+      "nombre": "Diseño de APIs REST",
+      "categoria": "Backend",
+      "nivel": "Intermedio",
+      "duracion_horas": 10,
+      "descripcion": "Aprende a diseñar y desarrollar APIs RESTful.",
+      "temas": ["REST", "Endpoints", "Autenticación", "Documentación"],
+      "habilidades": ["APIs", "Backend", "REST"],
+      "prerequisitos": ["python-basico", "sql-basico"],
+      "url": "https://ejemplo.com/cursos/api-rest"
+    },
+    {
+      "id": "scrum-basico",
+      "nombre": "Scrum Básico",
+      "categoria": "Metodologías Ágiles",
+      "nivel": "Principiante",
+      "duracion_horas": 5,
+      "descripcion": "Aprende la metodología Scrum para gestión de proyectos.",
+      "temas": ["Sprints", "Daily Scrum", "Backlog", "Retrospectiva"],
+      "habilidades": ["Scrum", "Metodologías ágiles", "Gestión de proyectos"],
+      "prerequisitos": [],
+      "url": "https://ejemplo.com/cursos/scrum-basico"
+    }
+  ],
+  "rutas_predefinidas": {
+    "desarrollador_web_frontend": {
+      "nombre": "Desarrollador Web Frontend",
+      "descripcion": "Ruta para convertirse en desarrollador web frontend",
+      "cursos": ["html-css-basico", "javascript-basico", "react-basico", "git-basico"],
+      "duracion_total_horas": 40
+    },
+    "desarrollador_backend_python": {
+      "nombre": "Desarrollador Backend Python",
+      "descripcion": "Ruta para convertirse en desarrollador backend con Python",
+      "cursos": ["python-basico", "python-intermedio", "sql-basico", "api-rest", "git-basico"],
+      "duracion_total_horas": 48
+    },
+    "devops_basico": {
+      "nombre": "DevOps Básico",
+      "descripcion": "Ruta para iniciar en DevOps",
+      "cursos": ["linux-basico", "git-basico", "docker-basico", "cloud-aws-intro"],
+      "duracion_total_horas": 33
+    },
+    "ciberseguridad_inicial": {
+      "nombre": "Ciberseguridad Inicial",
+      "descripcion": "Ruta para iniciar en ciberseguridad",
+      "cursos": ["redes-basico", "linux-basico", "ciberseguridad-intro"],
+      "duracion_total_horas": 28
+    },
+    "data_science_intro": {
+      "nombre": "Introducción a Data Science",
+      "descripcion": "Ruta para iniciar en ciencia de datos",
+      "cursos": ["python-basico", "python-intermedio", "sql-basico", "ia-intro"],
+      "duracion_total_horas": 48
+    }
+  }
+}

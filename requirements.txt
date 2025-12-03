@@ -1,0 +1,5 @@
+# El agente utiliza solo librerías estándar de Python
+# No se requieren dependencias adicionales
+
+# Para pruebas (opcional)
+pytest>=7.0.0
