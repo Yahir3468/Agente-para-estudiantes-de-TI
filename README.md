@@ -1,16 +1,28 @@
 # 🎓 Agente para Estudiantes de TI
 
-Un agente inteligente diseñado para ayudar a estudiantes de Tecnologías de la Información a crear rutas de aprendizaje personalizadas enfocadas en **Google Cloud Platform** y resolver dudas de manera rápida y eficiente.
+Un agente inteligente diseñado para ayudar a estudiantes de Tecnologías de la Información a crear rutas de aprendizaje personalizadas con cursos de múltiples plataformas: **Google Cloud, Huawei, Blue Prism, Microsoft, IBM y Khan Academy**.
 
 ## 🎯 Objetivo
 
 Este agente está diseñado especialmente para **estudiantes que trabajan y tienen poco tiempo** para estudiar. Ofrece:
 
+- **66+ cursos autogestivos** de 7 plataformas diferentes
 - **Rutas de aprendizaje estructuradas de 8 semanas** por nivel (Principiante, Intermedio, Avanzado)
 - **Formato micro-learning**: Actividades de 20-30 minutos
 - **4 horas por semana** de estudio recomendado
-- **Énfasis en nube, infraestructura, datos, automatización** y habilidades profesionales
-- **Resolución de dudas** sobre temas técnicos de Google Cloud
+- **Énfasis en nube, infraestructura, datos, automatización, RPA e IA**
+- **Resolución de dudas** sobre temas técnicos
+
+## 🏢 Plataformas y Cursos Disponibles
+
+| Plataforma | Cursos | Áreas |
+|------------|--------|-------|
+| **Google Cloud** | 8 | Cloud Computing, GCP, Data, ML |
+| **Huawei** | 13 | Redes, Cloud, IoT, AI, 5G, Big Data, Seguridad |
+| **Blue Prism** | 13 | RPA, Automatización, Desarrollo |
+| **Microsoft** | 8 | Power BI, Data Analytics, AI |
+| **IBM** | 8 | AI, Machine Learning, Watson, Data Science |
+| **Khan Academy** | 1 | Programación Web |
 
 ## 🚀 Instalación
 
@@ -125,6 +137,22 @@ print(f"Progreso: {progreso['ruta_actual']['porcentaje']}%")
 - **Data Engineer** - Diseña y gestiona pipelines de datos
 - **DevOps Engineer** - Automatiza operaciones de desarrollo
 - **Security Engineer** - Implementa seguridad en entornos cloud
+
+## 📚 Categorías de Cursos
+
+| Categoría | Plataforma | Descripción |
+|-----------|------------|-------------|
+| Google Cloud Platform | Google | Infraestructura, Compute Engine, Networking |
+| Seguridad en la Nube | Google | IAM, Security Best Practices |
+| Bases de Datos Cloud | Google | Cloud SQL, Firestore |
+| Contenedores y K8s | Google | Kubernetes, GKE |
+| Data Engineering | Google | BigQuery, Dataflow, ETL |
+| Machine Learning | Google | Vertex AI, AutoML |
+| **Huawei ICT** | Huawei | Redes, Cloud, IoT, AI, 5G, Big Data |
+| **Blue Prism RPA** | Blue Prism | Automatización robótica de procesos |
+| **Microsoft Learn** | Microsoft | Power BI, Data Analytics |
+| **IBM SkillsBuild** | IBM | IA, Watson, Data Science |
+| **Khan Academy** | Khan | Programación Web |
 
 ## 💡 Características para Estudiantes que Trabajan
 
