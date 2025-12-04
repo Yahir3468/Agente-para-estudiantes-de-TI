@@ -1,0 +1,1299 @@
+{
+  "configuracion": {
+    "horas_por_semana": 4,
+    "formato": "micro-learning",
+    "duracion_actividad_minutos": "20-30",
+    "duracion_ruta_semanas": 8,
+    "plataformas": ["Google", "Huawei", "Blue Prism", "Microsoft", "IBM", "Khan Academy", "SAP"]
+  },
+  "categorias": [
+    {
+      "id": "fundamentos_digitales",
+      "nombre": "Fundamentos Digitales",
+      "descripcion": "Habilidades digitales esenciales y productividad",
+      "cursos": [
+        {
+          "id": "fd-001",
+          "nombre": "Digital Productivity",
+          "nivel": "principiante",
+          "duracion_horas": 2,
+          "descripcion": "Gestión de archivos, correo, calendarios y colaboración digital",
+          "habilidades": ["gestión de archivos", "correo electrónico", "calendarios", "colaboración"],
+          "requisitos": [],
+          "actividades": ["Gestión de archivos", "Correo", "Calendarios", "Colaboración"],
+          "mini_ejercicio": "Crear un calendario semanal de estudio en Google Calendar",
+          "semana_ruta": 1,
+          "empresa": "Google",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "url": "https://www.cloudskillsboost.google/paths"
+        }
+      ]
+    },
+    {
+      "id": "google_cloud",
+      "nombre": "Google Cloud Platform",
+      "descripcion": "Cursos de infraestructura y servicios en Google Cloud",
+      "cursos": [
+        {
+          "id": "gcp-ccf-001",
+          "nombre": "Google Cloud Computing Foundations: Cloud Computing Fundamentals",
+          "nivel": "principiante",
+          "duracion_horas": 8,
+          "descripcion": "Fundamentos de computación en la nube con Google Cloud",
+          "habilidades": ["cloud computing", "GCP fundamentals", "infraestructura cloud"],
+          "requisitos": [],
+          "empresa": "Google",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://www.cloudskillsboost.google/paths/36/course_templates/153"
+        },
+        {
+          "id": "gcp-ccf-002",
+          "nombre": "Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud",
+          "nivel": "principiante",
+          "duracion_horas": 8,
+          "descripcion": "Datos, Machine Learning e IA en Google Cloud",
+          "habilidades": ["data", "machine learning", "AI", "GCP"],
+          "requisitos": ["gcp-ccf-001"],
+          "empresa": "Google",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://www.cloudskillsboost.google/paths/36/course_templates/156"
+        },
+        {
+          "id": "gcp-001",
+          "nombre": "Google Cloud Fundamentals: Core Infrastructure",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Conceptos de nube, regiones, máquinas virtuales y almacenamiento",
+          "habilidades": ["conceptos de nube", "regiones", "máquinas virtuales", "almacenamiento"],
+          "requisitos": ["fd-001"],
+          "actividades": ["Conceptos de nube", "Regiones", "VMs", "Almacenamiento"],
+          "mini_ejercicio": "Dibujar arquitectura básica de una app monolítica",
+          "semana_ruta": 2,
+          "empresa": "Google",
+          "idioma": "Inglés",
+          "url": "https://www.cloudskillsboost.google/course_templates/60"
+        },
+        {
+          "id": "gcp-002",
+          "nombre": "Compute Engine: Getting Started",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Crear y configurar máquinas virtuales en Google Cloud",
+          "habilidades": ["Compute Engine", "configuración VM", "tipos de máquina", "consola GCP"],
+          "requisitos": ["gcp-001"],
+          "actividades": ["Crear VM", "Configurar VM", "Comparar tipos"],
+          "mini_ejercicio": "Comparar tipos de VM y sus casos de uso",
+          "semana_ruta": 3,
+          "url": "https://www.cloudskillsboost.google/course_templates/648"
+        },
+        {
+          "id": "gcp-003",
+          "nombre": "Networking in Google Cloud: Fundamentals",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Redes VPC, subnets y reglas básicas de firewall",
+          "habilidades": ["VPC", "subnets", "firewall", "redes en nube"],
+          "requisitos": ["gcp-002"],
+          "actividades": ["Redes VPC", "Subnets", "Reglas de firewall"],
+          "mini_ejercicio": "Identificar diferencias entre VPC y red local",
+          "semana_ruta": 4,
+          "url": "https://www.cloudskillsboost.google/course_templates/35"
+        },
+        {
+          "id": "gcp-004",
+          "nombre": "Google Cloud Compute Engine Deep Dive",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "Infraestructura avanzada con Compute Engine",
+          "habilidades": ["tipos de máquina avanzados", "preemptible VMs", "grupos de instancias", "autoescalado"],
+          "requisitos": ["gcp-003"],
+          "actividades": ["Tipos de máquina", "Preemptible VMs", "Autoescalado"],
+          "mini_ejercicio": "Elegir 3 tipos de máquina y justificar su uso",
+          "semana_ruta": 1,
+          "url": "https://www.cloudskillsboost.google/course_templates/648"
+        },
+        {
+          "id": "gcp-005",
+          "nombre": "Networking in Google Cloud: Advanced",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "VPN, Cloud Router y VPC Peering",
+          "habilidades": ["VPN", "Cloud Router", "VPC Peering", "redes híbridas"],
+          "requisitos": ["gcp-004"],
+          "actividades": ["VPN", "Cloud Router", "VPC Peering"],
+          "mini_ejercicio": "Crear diagrama de red híbrida",
+          "semana_ruta": 2,
+          "url": "https://www.cloudskillsboost.google/course_templates/36"
+        },
+        {
+          "id": "gcp-006",
+          "nombre": "Architecting with Google Compute Engine",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Arquitectura escalable en Google Cloud",
+          "habilidades": ["arquitectura escalable", "alta disponibilidad", "diseño de soluciones", "patrones de arquitectura"],
+          "requisitos": ["gcp-005", "k8s-002"],
+          "actividades": ["Diseño de arquitectura", "Alta disponibilidad", "Escalabilidad"],
+          "mini_ejercicio": "Diseñar arquitectura para 10,000 usuarios concurrentes",
+          "semana_ruta": 1,
+          "url": "https://www.cloudskillsboost.google/course_templates/50"
+        }
+      ]
+    },
+    {
+      "id": "seguridad_cloud",
+      "nombre": "Seguridad en la Nube",
+      "descripcion": "Cursos de seguridad e identidad en Google Cloud",
+      "cursos": [
+        {
+          "id": "sec-001",
+          "nombre": "Security in Google Cloud for Beginners",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "IAM, roles, permisos y principio de mínimo privilegio",
+          "habilidades": ["IAM", "roles", "permisos", "mínimo privilegio"],
+          "requisitos": ["gcp-003"],
+          "actividades": ["IAM", "Roles", "Permisos", "Políticas"],
+          "mini_ejercicio": "Crear política de acceso para perfil 'estudiante'",
+          "semana_ruta": 5,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        },
+        {
+          "id": "sec-002",
+          "nombre": "Cloud IAM & Security Best Practices",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "Mejores prácticas de seguridad y cumplimiento",
+          "habilidades": ["políticas de seguridad", "cumplimiento", "auditoría", "mejores prácticas"],
+          "requisitos": ["sec-001"],
+          "actividades": ["Políticas", "Cumplimiento", "Auditoría"],
+          "mini_ejercicio": "Crear política de acceso por rol (admin, developer, operador)",
+          "semana_ruta": 3,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        },
+        {
+          "id": "sec-003",
+          "nombre": "Security and Identity Engineering on Google Cloud",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Ingeniería de seguridad e identidad avanzada",
+          "habilidades": ["ingeniería de seguridad", "identidad federada", "seguridad perimetral", "zero trust"],
+          "requisitos": ["sec-002", "k8s-002"],
+          "actividades": ["Seguridad avanzada", "Identidad federada", "Zero trust"],
+          "mini_ejercicio": "Diseñar reglas de seguridad para app con 3 niveles de acceso",
+          "semana_ruta": 6,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "bases_datos_cloud",
+      "nombre": "Bases de Datos en la Nube",
+      "descripcion": "Cursos de bases de datos SQL y NoSQL en Google Cloud",
+      "cursos": [
+        {
+          "id": "db-001",
+          "nombre": "Introduction to SQL",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Fundamentos de SQL: SELECT, INSERT, UPDATE, DELETE",
+          "habilidades": ["SELECT", "INSERT", "UPDATE", "DELETE", "consultas básicas"],
+          "requisitos": ["gcp-001"],
+          "actividades": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+          "mini_ejercicio": "Crear tabla 'estudiantes' con 5 registros",
+          "semana_ruta": 6,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        },
+        {
+          "id": "db-002",
+          "nombre": "Cloud SQL y Firestore Fundamentals",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "Bases de datos administradas: Cloud SQL y Firestore",
+          "habilidades": ["Cloud SQL", "Firestore", "SQL vs NoSQL", "bases de datos administradas"],
+          "requisitos": ["db-001", "sec-002"],
+          "actividades": ["Cloud SQL", "Firestore", "Comparación SQL vs NoSQL"],
+          "mini_ejercicio": "Comparar SQL vs NoSQL (cuándo usar qué)",
+          "semana_ruta": 7,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "automatizacion",
+      "nombre": "Automatización e IaC",
+      "descripcion": "Scripting, automatización e infraestructura como código",
+      "cursos": [
+        {
+          "id": "auto-001",
+          "nombre": "Introduction to Scripting (Bash/Python)",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Fundamentos de scripting con Bash y Python",
+          "habilidades": ["Bash", "Python básico", "scripts", "automatización básica"],
+          "requisitos": ["sec-001"],
+          "actividades": ["Scripting Bash", "Scripting Python", "Automatización"],
+          "mini_ejercicio": "Crear script que imprime fecha/hora y crea carpeta",
+          "semana_ruta": 7,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        },
+        {
+          "id": "auto-002",
+          "nombre": "Google Cloud Deployment Manager / Terraform Basics",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "Infraestructura como código con Deployment Manager y Terraform",
+          "habilidades": ["Deployment Manager", "Terraform", "IaC", "templates"],
+          "requisitos": ["auto-001", "gcp-005"],
+          "actividades": ["Deployment Manager", "Terraform", "Templates"],
+          "mini_ejercicio": "Crear archivo de Terraform para una VM",
+          "semana_ruta": 5,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "contenedores",
+      "nombre": "Contenedores y Kubernetes",
+      "descripcion": "Containerización y orquestación con Kubernetes",
+      "cursos": [
+        {
+          "id": "k8s-001",
+          "nombre": "Introduction to Kubernetes on Google Cloud",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "Fundamentos de Kubernetes en GKE",
+          "habilidades": ["Kubernetes", "pods", "nodes", "namespaces", "GKE"],
+          "requisitos": ["gcp-005"],
+          "actividades": ["Pods", "Nodes", "Namespaces", "Deployments"],
+          "mini_ejercicio": "Describir los componentes de un cluster (pod, node, namespace)",
+          "semana_ruta": 4,
+          "url": "https://www.cloudskillsboost.google/course_templates/639"
+        },
+        {
+          "id": "k8s-002",
+          "nombre": "Architecting with Kubernetes on GKE",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Arquitectura profesional con Kubernetes en GKE",
+          "habilidades": ["arquitectura K8s", "políticas de seguridad", "namespaces avanzados", "networking K8s"],
+          "requisitos": ["k8s-001", "sec-002"],
+          "actividades": ["Namespaces avanzados", "Políticas de seguridad", "Networking"],
+          "mini_ejercicio": "Configurar namespaces y políticas de seguridad",
+          "semana_ruta": 2,
+          "url": "https://www.cloudskillsboost.google/course_templates/639"
+        }
+      ]
+    },
+    {
+      "id": "observabilidad",
+      "nombre": "Observabilidad y Monitoreo",
+      "descripcion": "Monitoreo, logging y gestión de errores",
+      "cursos": [
+        {
+          "id": "obs-001",
+          "nombre": "Monitoring, Logging, and Error Reporting",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "Cloud Monitoring, Logging y Error Reporting",
+          "habilidades": ["Cloud Monitoring", "Cloud Logging", "Error Reporting", "métricas", "dashboards"],
+          "requisitos": ["auto-002"],
+          "actividades": ["Cloud Monitoring", "Cloud Logging", "Dashboards"],
+          "mini_ejercicio": "Plantear un dashboard con 4 métricas críticas",
+          "semana_ruta": 6,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "serverless",
+      "nombre": "Serverless y Microservicios",
+      "descripcion": "Cloud Functions, Cloud Run y arquitecturas serverless",
+      "cursos": [
+        {
+          "id": "sls-001",
+          "nombre": "Developing Serverless Apps (Cloud Functions / Cloud Run)",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Desarrollo de aplicaciones serverless con Cloud Functions y Cloud Run",
+          "habilidades": ["Cloud Functions", "Cloud Run", "serverless", "microservicios", "CI/CD"],
+          "requisitos": ["k8s-002", "obs-001"],
+          "actividades": ["Cloud Functions", "Cloud Run", "CI/CD"],
+          "mini_ejercicio": "Crear pipeline simple de CI/CD",
+          "semana_ruta": 3,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "data_engineering",
+      "nombre": "Data Engineering",
+      "descripcion": "Ingeniería de datos en Google Cloud",
+      "cursos": [
+        {
+          "id": "de-001",
+          "nombre": "Data Engineering on Google Cloud",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Pipelines de datos, ETL y procesamiento en Google Cloud",
+          "habilidades": ["BigQuery", "Dataflow", "ETL", "pipelines de datos", "procesamiento"],
+          "requisitos": ["sls-001", "db-002"],
+          "actividades": ["BigQuery", "Dataflow", "ETL"],
+          "mini_ejercicio": "Crear flujo ETL simple (ingesta → procesamiento → resultado)",
+          "semana_ruta": 4,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "machine_learning",
+      "nombre": "Machine Learning en la Nube",
+      "descripcion": "ML y AI con Vertex AI",
+      "cursos": [
+        {
+          "id": "ml-001",
+          "nombre": "ML for Production with Vertex AI",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Machine Learning en producción con Vertex AI y AutoML",
+          "habilidades": ["Vertex AI", "AutoML", "ML en producción", "modelos", "entrenamiento"],
+          "requisitos": ["de-001"],
+          "actividades": ["Vertex AI", "AutoML", "Entrenamiento de modelos"],
+          "mini_ejercicio": "Entrenar un modelo básico (clásico) con AutoML",
+          "semana_ruta": 5,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "costos",
+      "nombre": "Optimización de Costos",
+      "descripcion": "Gestión y optimización de costos en la nube",
+      "cursos": [
+        {
+          "id": "cost-001",
+          "nombre": "Cost Management Fundamentals",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Fundamentos de gestión y optimización de costos",
+          "habilidades": ["gestión de costos", "optimización", "presupuestos", "alertas", "recomendaciones"],
+          "requisitos": ["ml-001"],
+          "actividades": ["Gestión de costos", "Presupuestos", "Optimización"],
+          "mini_ejercicio": "Crear plan para reducir 20-30% de costos",
+          "semana_ruta": 7,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "huawei",
+      "nombre": "Huawei ICT Academy",
+      "descripcion": "Cursos de certificación Huawei en redes, cloud, IoT, AI y seguridad",
+      "cursos": [
+        {
+          "id": "hw-001",
+          "nombre": "Computer Network",
+          "nivel": "principiante",
+          "duracion_horas": 2,
+          "descripcion": "Fundamentos de redes de computadoras",
+          "habilidades": ["redes", "networking", "fundamentos"],
+          "requisitos": [],
+          "empresa": "Huawei",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=DIc2k_azOa70H_ZVL1lG9H-zs-c"
+        },
+        {
+          "id": "hw-002",
+          "nombre": "Information Representation and Data Organization",
+          "nivel": "principiante",
+          "duracion_horas": 2,
+          "descripcion": "Representación de información y organización de datos",
+          "habilidades": ["datos", "organización", "representación"],
+          "requisitos": [],
+          "empresa": "Huawei",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=Kvh3Sr0ORIS_9w4IieQz1F5oN1g"
+        },
+        {
+          "id": "hw-003",
+          "nombre": "Data Management and Analysis",
+          "nivel": "principiante",
+          "duracion_horas": 2,
+          "descripcion": "Gestión y análisis de datos",
+          "habilidades": ["gestión de datos", "análisis", "data management"],
+          "requisitos": [],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://talent.shixizhi.huawei.com/course/1365189427395223554/application-learn"
+        },
+        {
+          "id": "hw-004",
+          "nombre": "HCIA-IoT V2.5",
+          "nivel": "intermedio",
+          "duracion_horas": 8,
+          "descripcion": "Certificación Huawei en Internet of Things",
+          "habilidades": ["IoT", "sensores", "conectividad", "Huawei IoT"],
+          "requisitos": ["hw-001"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=Zfw6CkjmmG_JUqmkkIq9mOm2k1E"
+        },
+        {
+          "id": "hw-005",
+          "nombre": "HCIA-AI V3.5",
+          "nivel": "intermedio",
+          "duracion_horas": 10,
+          "descripcion": "Certificación Huawei en Inteligencia Artificial",
+          "habilidades": ["AI", "machine learning", "deep learning", "Huawei AI"],
+          "requisitos": ["hw-002"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://talent.shixizhi.huawei.com/course/1365189427395223554/application-learn"
+        },
+        {
+          "id": "hw-006",
+          "nombre": "HCIA-Security V4.0",
+          "nivel": "intermedio",
+          "duracion_horas": 11,
+          "descripcion": "Certificación Huawei en Seguridad",
+          "habilidades": ["seguridad", "ciberseguridad", "firewall", "Huawei Security"],
+          "requisitos": ["hw-001"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=ouCDrjcXQSCEXdfdoLUSib5_1cY"
+        },
+        {
+          "id": "hw-007",
+          "nombre": "HCIA-Cloud Computing V4.0",
+          "nivel": "intermedio",
+          "duracion_horas": 12,
+          "descripcion": "Certificación Huawei en Cloud Computing",
+          "habilidades": ["cloud computing", "virtualización", "Huawei Cloud"],
+          "requisitos": ["hw-001"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=If1lRf3WaD2zlsHVq7AtaCVgRFk"
+        },
+        {
+          "id": "hw-008",
+          "nombre": "HCIA-Datacom V1.0",
+          "nivel": "intermedio",
+          "duracion_horas": 20,
+          "descripcion": "Certificación Huawei en Comunicación de Datos",
+          "habilidades": ["datacom", "routing", "switching", "Huawei Datacom"],
+          "requisitos": ["hw-001"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=Og4Twj4_0qQ8KDYm-1vF0_ZNce4"
+        },
+        {
+          "id": "hw-009",
+          "nombre": "HCIA-Big Data V3.0",
+          "nivel": "intermedio",
+          "duracion_horas": 12,
+          "descripcion": "Certificación Huawei en Big Data",
+          "habilidades": ["big data", "hadoop", "spark", "Huawei Big Data"],
+          "requisitos": ["hw-003"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=UeXYT4iHcWzps3cszNqQ3VI2fhs"
+        },
+        {
+          "id": "hw-010",
+          "nombre": "HCIA-5G V2.0",
+          "nivel": "intermedio",
+          "duracion_horas": 10,
+          "descripcion": "Certificación Huawei en tecnología 5G",
+          "habilidades": ["5G", "telecomunicaciones", "redes móviles"],
+          "requisitos": ["hw-001"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=S8gARJNgxUNY0w2gdEhtTAYM264"
+        },
+        {
+          "id": "hw-011",
+          "nombre": "5G Overview – Mobile Communication Evolution",
+          "nivel": "principiante",
+          "duracion_horas": 1,
+          "descripcion": "Introducción a la evolución de comunicaciones móviles y 5G",
+          "habilidades": ["5G", "comunicaciones móviles", "evolución tecnológica"],
+          "requisitos": [],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=Zjg1oOBwa_x04XytkR81rDCfNKY"
+        },
+        {
+          "id": "hw-012",
+          "nombre": "HCIA-Cloud Services V2.2",
+          "nivel": "intermedio",
+          "duracion_horas": 12,
+          "descripcion": "Certificación en servicios de nube Huawei",
+          "habilidades": ["cloud services", "IaaS", "PaaS", "Huawei Cloud"],
+          "requisitos": ["hw-007"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=f8d75TWQhCftprL7WWqkwpdRR0k"
+        },
+        {
+          "id": "hw-013",
+          "nombre": "HCIA-Storage V5.0",
+          "nivel": "intermedio",
+          "duracion_horas": 5,
+          "descripcion": "Certificación Huawei en almacenamiento",
+          "habilidades": ["storage", "almacenamiento", "SAN", "NAS"],
+          "requisitos": ["hw-001"],
+          "empresa": "Huawei",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://e.huawei.com/en/talent/outPage/#/sxz-course/home?courseId=P-iDilrf-I9EF9iATH185FZlYnU"
+        }
+      ]
+    },
+    {
+      "id": "blue_prism",
+      "nombre": "Blue Prism RPA",
+      "descripcion": "Cursos de automatización robótica de procesos (RPA) con Blue Prism",
+      "cursos": [
+        {
+          "id": "bp-001",
+          "nombre": "What is RPA?",
+          "nivel": "principiante",
+          "duracion_horas": 0.17,
+          "descripcion": "Introducción a la automatización robótica de procesos",
+          "habilidades": ["RPA", "automatización", "procesos"],
+          "requisitos": [],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES", "EGRESADOS"],
+          "carreras": ["TODAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/185"
+        },
+        {
+          "id": "bp-002",
+          "nombre": "The Blue Prism Vision",
+          "nivel": "principiante",
+          "duracion_horas": 0.08,
+          "descripcion": "Visión y filosofía de Blue Prism",
+          "habilidades": ["RPA", "Blue Prism", "visión empresarial"],
+          "requisitos": ["bp-001"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES", "EGRESADOS"],
+          "carreras": ["TODAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/178"
+        },
+        {
+          "id": "bp-003",
+          "nombre": "Watch It Work",
+          "nivel": "principiante",
+          "duracion_horas": 0.25,
+          "descripcion": "Demostración práctica de Blue Prism en acción",
+          "habilidades": ["RPA", "Blue Prism", "demostración"],
+          "requisitos": ["bp-002"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["DOCENTES", "EGRESADOS"],
+          "carreras": ["INGENIERIAS", "LAE", "LNI"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/182"
+        },
+        {
+          "id": "bp-004",
+          "nombre": "The Blue Prism Digital Workforce",
+          "nivel": "principiante",
+          "duracion_horas": 0.03,
+          "descripcion": "Fuerza de trabajo digital con Blue Prism",
+          "habilidades": ["RPA", "digital workforce", "automatización"],
+          "requisitos": ["bp-001"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["TODOS"],
+          "carreras": ["TODAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/internal/view/elearning/187/the-blue-prismr-digital-workforce"
+        },
+        {
+          "id": "bp-005",
+          "nombre": "Blue Prism Foundation Training",
+          "nivel": "intermedio",
+          "duracion_horas": 50,
+          "descripcion": "Entrenamiento fundamental completo en Blue Prism",
+          "habilidades": ["RPA", "Blue Prism", "desarrollo", "automatización"],
+          "requisitos": ["bp-003"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["DOCENTES", "EGRESADOS"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/180/play/2900/accessing-blue-prism-training-environment"
+        },
+        {
+          "id": "bp-006",
+          "nombre": "Blue Prism Associate Developer (EN-2021)",
+          "nivel": "avanzado",
+          "duracion_horas": 55,
+          "descripcion": "Certificación de desarrollador asociado Blue Prism",
+          "habilidades": ["RPA", "Blue Prism", "desarrollo avanzado", "certificación"],
+          "requisitos": ["bp-005"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["DOCENTES", "EGRESADOS"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/learning_plan/view/217/blue-prismr-associate-developer-en-2021"
+        },
+        {
+          "id": "bp-007",
+          "nombre": "Blue Prism 7.0: Browser-based Control Room",
+          "nivel": "intermedio",
+          "duracion_horas": 0.33,
+          "descripcion": "Control Room basado en navegador en Blue Prism 7.0",
+          "habilidades": ["RPA", "Control Room", "Blue Prism 7.0"],
+          "requisitos": ["bp-003"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/internal/view/elearning/19678/blue-prismr-70-browser-based-control-room"
+        },
+        {
+          "id": "bp-008",
+          "nombre": "Blue Prism 7.0: Authentication Server",
+          "nivel": "intermedio",
+          "duracion_horas": 0.42,
+          "descripcion": "Servidor de autenticación en Blue Prism 7.0",
+          "habilidades": ["RPA", "autenticación", "seguridad", "Blue Prism 7.0"],
+          "requisitos": ["bp-007"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["TODOS"],
+          "carreras": ["TODAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/internal/view/elearning/19682/blue-prismr-70-authentication-server"
+        },
+        {
+          "id": "bp-009",
+          "nombre": "Blue Prism and Web Services",
+          "nivel": "intermedio",
+          "duracion_horas": 0.67,
+          "descripcion": "Integración de Blue Prism con servicios web",
+          "habilidades": ["RPA", "web services", "API", "integración"],
+          "requisitos": ["bp-005"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["DOCENTES"],
+          "carreras": ["ADMINISTRACIÓN", "INGENIERIAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/internal/view/elearning/16734/BluePrism%C2%AEandWebServices"
+        },
+        {
+          "id": "bp-010",
+          "nombre": "Blue Prism Solution Designer",
+          "nivel": "avanzado",
+          "duracion_horas": 0.33,
+          "descripcion": "Diseño de soluciones con Blue Prism",
+          "habilidades": ["RPA", "diseño de soluciones", "arquitectura"],
+          "requisitos": ["bp-005"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["TODOS"],
+          "carreras": ["TODAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/internal/view/elearning/239/BluePrism%C2%AESolutionDesigner"
+        },
+        {
+          "id": "bp-011",
+          "nombre": "Blue Prism SAP Accelerators: Introduction",
+          "nivel": "intermedio",
+          "duracion_horas": 0.25,
+          "descripcion": "Introducción a aceleradores SAP en Blue Prism",
+          "habilidades": ["RPA", "SAP", "aceleradores", "integración"],
+          "requisitos": ["bp-005"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["TODOS"],
+          "carreras": ["TODAS"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/internal/view/elearning/16894/blue-prismr-sap-accelerators-introduction"
+        },
+        {
+          "id": "bp-012",
+          "nombre": "Blue Prism Tiles and Dashboards",
+          "nivel": "intermedio",
+          "duracion_horas": 0.17,
+          "descripcion": "Tiles y Dashboards en Blue Prism",
+          "habilidades": ["RPA", "dashboards", "visualización", "monitoreo"],
+          "requisitos": ["bp-007"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES", "EGRESADOS"],
+          "carreras": ["LNI", "LTI"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/16767/play/36449/blue-prism-tiles-and-dashboards-pdf-downloads"
+        },
+        {
+          "id": "bp-013",
+          "nombre": "Blue Prism 7.0: Using the RESTful API",
+          "nivel": "avanzado",
+          "duracion_horas": 0.47,
+          "descripcion": "Uso de API RESTful en Blue Prism 7.0",
+          "habilidades": ["RPA", "RESTful API", "integración", "desarrollo"],
+          "requisitos": ["bp-009"],
+          "empresa": "Blue Prism",
+          "idioma": "Inglés",
+          "poblacion": ["EGRESADOS"],
+          "carreras": ["LAE", "CPF", "LNI"],
+          "url": "https://blue-prism.docebosaas.com/learn/course/19882/blue-prismr-70-using-the-blue-prismr-restful-api"
+        }
+      ]
+    },
+    {
+      "id": "microsoft",
+      "nombre": "Microsoft Learn",
+      "descripcion": "Cursos de Microsoft en Power BI, Azure y análisis de datos",
+      "cursos": [
+        {
+          "id": "ms-001",
+          "nombre": "Get started with Microsoft data analytics",
+          "nivel": "principiante",
+          "duracion_horas": 1,
+          "descripcion": "Introducción al análisis de datos con Microsoft",
+          "habilidades": ["data analytics", "Microsoft", "análisis de datos"],
+          "requisitos": [],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft/"
+        },
+        {
+          "id": "ms-002",
+          "nombre": "Create and use analytics reports with Power BI",
+          "nivel": "principiante",
+          "duracion_horas": 4.25,
+          "descripcion": "Crear y usar reportes de análisis con Power BI",
+          "habilidades": ["Power BI", "reportes", "visualización", "analytics"],
+          "requisitos": ["ms-001"],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://learn.microsoft.com/en-us/training/paths/create-use-analytics-reports-power-bi/"
+        },
+        {
+          "id": "ms-003",
+          "nombre": "Develop dynamic reports with Microsoft Power BI",
+          "nivel": "intermedio",
+          "duracion_horas": 9.72,
+          "descripcion": "Desarrollar reportes dinámicos con Power BI",
+          "habilidades": ["Power BI", "reportes dinámicos", "DAX", "visualización avanzada"],
+          "requisitos": ["ms-002"],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://learn.microsoft.com/en-us/training/paths/develop-dynamic-reports-microsoft-power-bi/"
+        },
+        {
+          "id": "ms-004",
+          "nombre": "Model data with Power BI",
+          "nivel": "intermedio",
+          "duracion_horas": 6.07,
+          "descripcion": "Modelado de datos con Power BI",
+          "habilidades": ["Power BI", "modelado de datos", "relaciones", "DAX"],
+          "requisitos": ["ms-002"],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://learn.microsoft.com/en-us/training/paths/model-data-power-bi/"
+        },
+        {
+          "id": "ms-005",
+          "nombre": "Design and build tabular models",
+          "nivel": "intermedio",
+          "duracion_horas": 4.88,
+          "descripcion": "Diseñar y construir modelos tabulares",
+          "habilidades": ["modelos tabulares", "SSAS", "Power BI", "diseño de datos"],
+          "requisitos": ["ms-004"],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://learn.microsoft.com/en-us/training/paths/design-build-tabular-models/"
+        },
+        {
+          "id": "ms-006",
+          "nombre": "Build Power BI visuals and reports",
+          "nivel": "intermedio",
+          "duracion_horas": 5.63,
+          "descripcion": "Construir visualizaciones y reportes en Power BI",
+          "habilidades": ["Power BI", "visualizaciones", "reportes", "dashboards"],
+          "requisitos": ["ms-003"],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://learn.microsoft.com/en-us/training/paths/build-power-bi-visuals-reports/"
+        },
+        {
+          "id": "ms-007",
+          "nombre": "Manage workspaces and datasets in Power BI",
+          "nivel": "intermedio",
+          "duracion_horas": 1.88,
+          "descripcion": "Gestionar espacios de trabajo y datasets en Power BI",
+          "habilidades": ["Power BI", "workspaces", "datasets", "administración"],
+          "requisitos": ["ms-003"],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://learn.microsoft.com/en-us/training/paths/manage-workspaces-datasets-power-bi/"
+        },
+        {
+          "id": "ms-008",
+          "nombre": "Uso de la IA para la educación",
+          "nivel": "principiante",
+          "duracion_horas": 16,
+          "descripcion": "Aplicación de IA en el ámbito educativo",
+          "habilidades": ["IA", "educación", "Microsoft AI", "herramientas educativas"],
+          "requisitos": [],
+          "empresa": "Microsoft",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["TODAS"],
+          "url": "https://www.educandocontigo.com/mst/modulos/cursos/frm_curso?idgrupo=2&idcurso=2"
+        }
+      ]
+    },
+    {
+      "id": "ibm",
+      "nombre": "IBM SkillsBuild",
+      "descripcion": "Cursos de IBM en IA, Machine Learning y tecnologías empresariales",
+      "cursos": [
+        {
+          "id": "ibm-001",
+          "nombre": "Introducción a la IA de nivel empresarial",
+          "nivel": "principiante",
+          "duracion_horas": 4,
+          "descripcion": "Introducción a la inteligencia artificial empresarial",
+          "habilidades": ["IA", "enterprise AI", "IBM Watson", "fundamentos"],
+          "requisitos": [],
+          "empresa": "IBM",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["TODAS"],
+          "url": "https://keyskill-clms.comprehend.ibm.com/pluginfile.php/131676/mod_tincanlaunch/content/index.html"
+        },
+        {
+          "id": "ibm-002",
+          "nombre": "Fundamentos de la inteligencia artificial",
+          "nivel": "principiante",
+          "duracion_horas": 9,
+          "descripcion": "Fundamentos completos de IA",
+          "habilidades": ["IA", "machine learning", "deep learning", "fundamentos"],
+          "requisitos": [],
+          "empresa": "IBM",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["TODAS"],
+          "url": "https://keyskill-clms.comprehend.ibm.com/pluginfile.php/131676/mod_tincanlaunch/content/index.html"
+        },
+        {
+          "id": "ibm-003",
+          "nombre": "Creación de soluciones empresariales de IA confiables",
+          "nivel": "intermedio",
+          "duracion_horas": 15,
+          "descripcion": "Desarrollo de soluciones empresariales de IA confiables",
+          "habilidades": ["IA empresarial", "ética en IA", "soluciones confiables", "IBM"],
+          "requisitos": ["ibm-002"],
+          "empresa": "IBM",
+          "idioma": "Inglés",
+          "poblacion": ["ESTUDIANTES", "DOCENTES"],
+          "carreras": ["TODAS"],
+          "url": "https://keyskill-clms.comprehend.ibm.com/mod/tincanlaunch/view.php?id=4307"
+        },
+        {
+          "id": "ibm-004",
+          "nombre": "Creación de soluciones de IA con algoritmos avanzados",
+          "nivel": "avanzado",
+          "duracion_horas": 7,
+          "descripcion": "Desarrollo de soluciones IA con algoritmos avanzados y frameworks open source",
+          "habilidades": ["algoritmos avanzados", "frameworks ML", "TensorFlow", "PyTorch"],
+          "requisitos": ["ibm-003"],
+          "empresa": "IBM",
+          "idioma": "Inglés",
+          "poblacion": ["AVANZADO"],
+          "carreras": ["TODAS"],
+          "url": "https://keyskill-clms.comprehend.ibm.com/mod/tincanlaunch/view.php?id=4748"
+        },
+        {
+          "id": "ibm-005",
+          "nombre": "Dominar el arte de dar indicaciones: prompts efectivos para IA",
+          "nivel": "avanzado",
+          "duracion_horas": 1,
+          "descripcion": "Técnicas avanzadas de prompt engineering para modelos de lenguaje",
+          "habilidades": ["prompt engineering", "LLM", "GPT", "instrucciones efectivas"],
+          "requisitos": ["ibm-002"],
+          "empresa": "IBM",
+          "idioma": "Español",
+          "poblacion": ["AVANZADO"],
+          "carreras": ["TODAS"],
+          "url": "https://keyskill-clms.comprehend.ibm.com/course/view.php?id=605"
+        },
+        {
+          "id": "ibm-006",
+          "nombre": "IBM AI Education",
+          "nivel": "principiante",
+          "duracion_horas": 4,
+          "descripcion": "Educación en IA de IBM - programa MindSpark",
+          "habilidades": ["IA", "educación", "IBM", "fundamentos"],
+          "requisitos": [],
+          "empresa": "IBM",
+          "idioma": "Inglés",
+          "poblacion": ["PRINCIPIANTE"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://www.mindspark.org/ibm-ai"
+        },
+        {
+          "id": "ibm-007",
+          "nombre": "Soluciones de IA con IBM Watson",
+          "nivel": "avanzado",
+          "duracion_horas": 10,
+          "descripcion": "Desarrollo de soluciones con IBM Watson",
+          "habilidades": ["IBM Watson", "NLP", "chatbots", "IA conversacional"],
+          "requisitos": ["ibm-004"],
+          "empresa": "IBM",
+          "idioma": "Inglés",
+          "poblacion": ["AVANZADO"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://www.ibm.com/training/artificial-intelligence"
+        },
+        {
+          "id": "ibm-008",
+          "nombre": "DS4ALL - Data Science for All",
+          "nivel": "avanzado",
+          "duracion_horas": 20,
+          "descripcion": "Ciencia de datos accesible para todos - repositorio open source",
+          "habilidades": ["data science", "Python", "análisis de datos", "visualización"],
+          "requisitos": ["ibm-002"],
+          "empresa": "IBM",
+          "idioma": "Español",
+          "poblacion": ["AVANZADO"],
+          "carreras": ["INGENIERIAS"],
+          "url": "https://github.com/odpi/OpenDS4All/"
+        }
+      ]
+    },
+    {
+      "id": "khan_academy",
+      "nombre": "Khan Academy",
+      "descripcion": "Cursos gratuitos de programación web y fundamentos",
+      "cursos": [
+        {
+          "id": "ka-001",
+          "nombre": "Programación web",
+          "nivel": "principiante",
+          "duracion_horas": 30,
+          "descripcion": "Curso completo de programación web: HTML, CSS, JavaScript",
+          "habilidades": ["HTML", "CSS", "JavaScript", "programación web"],
+          "requisitos": [],
+          "empresa": "Khan Academy",
+          "idioma": "Español",
+          "poblacion": ["ESTUDIANTES", "PROFESORES"],
+          "carreras": ["INGENIERIAS", "LTI"],
+          "url": "https://es.khanacademy.org/join/U52YGY2A"
+        }
+      ]
+    }
+  ],
+  "rutas_aprendizaje": {
+    "principiante": {
+      "id": "ruta_principiante",
+      "nombre": "Ruta Principiante",
+      "duracion_semanas": 8,
+      "horas_por_semana": 4,
+      "objetivo": "Desarrollar fundamentos sólidos en computación en la nube, habilidades digitales y lógica técnica para cualquier área de TI",
+      "semanas": [
+        {
+          "semana": 1,
+          "titulo": "Fundamentos Digitales",
+          "curso_id": "fd-001",
+          "duracion_sugerida_horas": 2,
+          "actividades": ["Gestión de archivos", "Correo", "Calendarios", "Colaboración"],
+          "mini_ejercicio": "Crear un calendario semanal de estudio en Google Calendar"
+        },
+        {
+          "semana": 2,
+          "titulo": "Introducción a Google Cloud",
+          "curso_id": "gcp-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Conceptos de nube", "Regiones", "Máquinas virtuales", "Almacenamiento"],
+          "mini_ejercicio": "Dibujar arquitectura básica de una app monolítica"
+        },
+        {
+          "semana": 3,
+          "titulo": "Computación y Almacenamiento",
+          "curso_id": "gcp-002",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Crear y configurar una máquina virtual en consola (simulada)"],
+          "mini_ejercicio": "Comparar tipos de VM"
+        },
+        {
+          "semana": 4,
+          "titulo": "Redes Básicas en la Nube",
+          "curso_id": "gcp-003",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Redes VPC", "Subnets", "Reglas básicas de firewall"],
+          "mini_ejercicio": "Identificar diferencias entre VPC y red local"
+        },
+        {
+          "semana": 5,
+          "titulo": "Seguridad Básica",
+          "curso_id": "sec-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["IAM", "Roles", "Permisos", "Principio de mínimo privilegio"],
+          "mini_ejercicio": "Crear política de acceso para perfil 'estudiante'"
+        },
+        {
+          "semana": 6,
+          "titulo": "Introducción a Bases de Datos",
+          "curso_id": "db-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+          "mini_ejercicio": "Crear tabla 'estudiantes' con 5 registros"
+        },
+        {
+          "semana": 7,
+          "titulo": "Automatización básica",
+          "curso_id": "auto-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Scripting Bash", "Scripting Python básico"],
+          "mini_ejercicio": "Script que imprime fecha/hora y crea carpeta"
+        },
+        {
+          "semana": 8,
+          "titulo": "Proyecto Final Principiante",
+          "curso_id": null,
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Crear un entorno simple en GCP: VM + Firewall + bucket"],
+          "mini_ejercicio": "Capturas + explicación de 5 minutos por escrito",
+          "es_proyecto_final": true,
+          "entregables": ["Capturas de pantalla", "Explicación escrita de 5 minutos"]
+        }
+      ]
+    },
+    "intermedio": {
+      "id": "ruta_intermedio",
+      "nombre": "Ruta Intermedio",
+      "duracion_semanas": 8,
+      "horas_por_semana": 4,
+      "objetivo": "Fortalecer infraestructura, redes, seguridad y operaciones en Google Cloud. Ideal para alumnos que ya manejan conceptos básicos",
+      "requisitos_previos": ["ruta_principiante"],
+      "semanas": [
+        {
+          "semana": 1,
+          "titulo": "Infraestructura Avanzada",
+          "curso_id": "gcp-004",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Compute Engine avanzado", "Tipos de máquina", "Autoescalado"],
+          "mini_ejercicio": "Elegir 3 tipos de máquina y justificar su uso"
+        },
+        {
+          "semana": 2,
+          "titulo": "Redes Avanzadas",
+          "curso_id": "gcp-005",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["VPN", "Cloud Router", "VPC Peering"],
+          "mini_ejercicio": "Crear diagrama de red híbrida"
+        },
+        {
+          "semana": 3,
+          "titulo": "Seguridad y Cumplimiento",
+          "curso_id": "sec-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Políticas de seguridad", "Cumplimiento", "Auditoría"],
+          "mini_ejercicio": "Crear política de acceso por rol (admin, developer, operador)"
+        },
+        {
+          "semana": 4,
+          "titulo": "Contenedores",
+          "curso_id": "k8s-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Kubernetes", "Pods", "Nodes", "Namespaces"],
+          "mini_ejercicio": "Describir los componentes de un cluster (pod, node, namespace)"
+        },
+        {
+          "semana": 5,
+          "titulo": "Automatización e Infraestructura como Código",
+          "curso_id": "auto-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Deployment Manager", "Terraform"],
+          "mini_ejercicio": "Crear archivo de Terraform para una VM"
+        },
+        {
+          "semana": 6,
+          "titulo": "Observabilidad",
+          "curso_id": "obs-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Monitoring", "Logging", "Error Reporting"],
+          "mini_ejercicio": "Plantear un dashboard con 4 métricas críticas"
+        },
+        {
+          "semana": 7,
+          "titulo": "Bases de Datos en la Nube",
+          "curso_id": "db-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Cloud SQL", "Firestore", "SQL vs NoSQL"],
+          "mini_ejercicio": "Comparar SQL vs NoSQL (cuándo usar qué)"
+        },
+        {
+          "semana": 8,
+          "titulo": "Proyecto Final Intermedio",
+          "curso_id": null,
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Construir arquitectura: VM backend + Cloud SQL + Balanceador + Log monitoring"],
+          "mini_ejercicio": "Diagrama + checklist de seguridad",
+          "es_proyecto_final": true,
+          "entregables": ["Diagrama de arquitectura", "Checklist de seguridad"],
+          "componentes_proyecto": ["VM backend", "Base de datos Cloud SQL", "Balanceador de carga", "Log monitoring"]
+        }
+      ]
+    },
+    "avanzado": {
+      "id": "ruta_avanzado",
+      "nombre": "Ruta Avanzado",
+      "duracion_semanas": 8,
+      "horas_por_semana": 4,
+      "objetivo": "Especialización en arquitectura en la nube, datos, automatización y soluciones cloud escalables",
+      "requisitos_previos": ["ruta_intermedio"],
+      "semanas": [
+        {
+          "semana": 1,
+          "titulo": "Arquitectura Escalable",
+          "curso_id": "gcp-006",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Diseño de arquitectura escalable", "Alta disponibilidad"],
+          "mini_ejercicio": "Diseñar arquitectura para 10,000 usuarios concurrentes"
+        },
+        {
+          "semana": 2,
+          "titulo": "Kubernetes Profesional",
+          "curso_id": "k8s-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Namespaces avanzados", "Políticas de seguridad K8s"],
+          "mini_ejercicio": "Configurar namespaces y políticas de seguridad"
+        },
+        {
+          "semana": 3,
+          "titulo": "Serverless y Microservicios",
+          "curso_id": "sls-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Cloud Functions", "Cloud Run", "CI/CD"],
+          "mini_ejercicio": "Crear pipeline simple de CI/CD"
+        },
+        {
+          "semana": 4,
+          "titulo": "Data Engineering",
+          "curso_id": "de-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["BigQuery", "Dataflow", "Pipelines ETL"],
+          "mini_ejercicio": "Crear flujo ETL simple (ingesta → procesamiento → resultado)"
+        },
+        {
+          "semana": 5,
+          "titulo": "Machine Learning Básico en la Nube",
+          "curso_id": "ml-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Vertex AI", "AutoML", "Entrenamiento de modelos"],
+          "mini_ejercicio": "Entrenar un modelo básico (clásico) con AutoML"
+        },
+        {
+          "semana": 6,
+          "titulo": "Seguridad Avanzada",
+          "curso_id": "sec-003",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Seguridad perimetral", "Zero trust", "Identidad federada"],
+          "mini_ejercicio": "Diseñar reglas de seguridad para app con 3 niveles de acceso"
+        },
+        {
+          "semana": 7,
+          "titulo": "Optimización de Costos",
+          "curso_id": "cost-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Gestión de costos", "Presupuestos", "Recomendaciones"],
+          "mini_ejercicio": "Crear plan para reducir 20-30% de costos"
+        },
+        {
+          "semana": 8,
+          "titulo": "Proyecto Final Avanzado",
+          "curso_id": null,
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Solución empresarial completa"],
+          "mini_ejercicio": "Arquitectura + documentación técnica",
+          "es_proyecto_final": true,
+          "entregables": ["Arquitectura completa", "Documentación técnica"],
+          "componentes_proyecto": ["Cloud Run + API", "Base de datos administrada", "Pipeline de datos", "Monitoreo", "CI/CD"]
+        }
+      ]
+    }
+  },
+  "perfiles_carrera": [
+    {
+      "id": "cloud_engineer",
+      "nombre": "Cloud Engineer",
+      "descripcion": "Diseña, desarrolla y gestiona infraestructura en Google Cloud",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["gcp-001", "gcp-002", "gcp-003", "gcp-004", "gcp-005", "gcp-006"]
+    },
+    {
+      "id": "cloud_architect",
+      "nombre": "Cloud Architect",
+      "descripcion": "Diseña soluciones empresariales escalables en la nube",
+      "rutas_recomendadas": ["intermedio", "avanzado"],
+      "cursos_clave": ["gcp-006", "k8s-002", "sls-001", "de-001", "sec-003"]
+    },
+    {
+      "id": "data_engineer",
+      "nombre": "Data Engineer",
+      "descripcion": "Diseña y gestiona pipelines de datos en la nube",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["db-001", "db-002", "de-001", "ml-001"]
+    },
+    {
+      "id": "devops_engineer",
+      "nombre": "DevOps Engineer",
+      "descripcion": "Automatiza y gestiona operaciones de desarrollo en la nube",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["auto-001", "auto-002", "k8s-001", "k8s-002", "obs-001", "sls-001"]
+    },
+    {
+      "id": "security_engineer",
+      "nombre": "Security Engineer",
+      "descripcion": "Implementa y gestiona seguridad en entornos cloud",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["sec-001", "sec-002", "sec-003", "gcp-003", "gcp-005"]
+    }
+  ]
+}
