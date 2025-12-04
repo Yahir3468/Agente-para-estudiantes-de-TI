@@ -1,15 +1,16 @@
 # 🎓 Agente para Estudiantes de TI
 
-Un agente inteligente diseñado para ayudar a estudiantes de Tecnologías de la Información a crear rutas de aprendizaje personalizadas y resolver dudas de manera rápida y eficiente.
+Un agente inteligente diseñado para ayudar a estudiantes de Tecnologías de la Información a crear rutas de aprendizaje personalizadas enfocadas en **Google Cloud Platform** y resolver dudas de manera rápida y eficiente.
 
 ## 🎯 Objetivo
 
 Este agente está diseñado especialmente para **estudiantes que trabajan y tienen poco tiempo** para estudiar. Ofrece:
 
-- **Rutas de aprendizaje personalizadas** basadas en tu perfil de carrera objetivo
-- **Cursos autogestivos** organizados por categoría y nivel
-- **Resolución de dudas** sobre temas técnicos comunes
-- **Optimización del tiempo de estudio** con tips y técnicas de aprendizaje ágil
+- **Rutas de aprendizaje estructuradas de 8 semanas** por nivel (Principiante, Intermedio, Avanzado)
+- **Formato micro-learning**: Actividades de 20-30 minutos
+- **4 horas por semana** de estudio recomendado
+- **Énfasis en nube, infraestructura, datos, automatización** y habilidades profesionales
+- **Resolución de dudas** sobre temas técnicos de Google Cloud
 
 ## 🚀 Instalación
 
@@ -39,24 +40,6 @@ pytest
 
 ## 📖 Uso
 
-### Interfaz de línea de comandos (CLI)
-
-```bash
-python main.py
-```
-
-Esto abrirá un menú interactivo con las siguientes opciones:
-
-1. **Configurar mi perfil** - Define tu nombre, tiempo disponible y objetivo de carrera
-2. **Ver rutas de aprendizaje** - Explora los perfiles de carrera disponibles
-3. **Generar ruta personalizada** - Crea tu ruta por perfil o habilidades específicas
-4. **Ruta rápida** - Para cuando tienes muy poco tiempo
-5. **Resolver una duda** - Busca respuestas a preguntas técnicas
-6. **Ver mi progreso** - Monitorea tu avance
-7. **Marcar curso completado** - Registra los cursos terminados
-8. **Tips de estudio** - Técnicas para aprender de manera eficiente
-9. **Ver categorías y cursos** - Lista todos los cursos disponibles
-
 ### Uso programático
 
 ```python
@@ -65,91 +48,118 @@ from src.agente import AgenteEstudiantes
 # Crear instancia del agente
 agente = AgenteEstudiantes()
 
-# Configurar perfil
+# Configurar perfil (4 horas semanales recomendado)
 agente.configurar_perfil(
-    nombre="Juan",
-    horas_disponibles_semana=8,
-    objetivo_carrera="desarrollador_web",
+    nombre="María",
+    horas_disponibles_semana=4,
+    objetivo_carrera="cloud_engineer",
     nivel_experiencia="principiante"
 )
 
-# Obtener ruta de aprendizaje
-ruta = agente.obtener_ruta_aprendizaje()
-print(ruta)
+# Obtener ruta estructurada de 8 semanas
+ruta = agente.obtener_ruta_estructurada(nivel="principiante")
+for semana in ruta["semanas"]:
+    print(f"Semana {semana['semana']}: {semana['titulo']}")
+    print(f"  Mini-ejercicio: {semana['mini_ejercicio']}")
+
+# Marcar semana como completada
+agente.marcar_semana_completada(1)
 
 # Resolver una duda
-respuesta = agente.resolver_duda("¿Qué es una variable en Python?")
+respuesta = agente.resolver_duda("¿Qué es una VPC en Google Cloud?")
 print(respuesta)
 
-# Generar ruta rápida (cuando tienes poco tiempo)
-ruta_rapida = agente.obtener_ruta_rapida(
-    categoria="programacion",
-    horas_disponibles=15,
-    nivel_maximo="basico"
-)
-print(ruta_rapida)
+# Ver progreso
+progreso = agente.obtener_progreso()
+print(f"Progreso: {progreso['ruta_actual']['porcentaje']}%")
 ```
 
-## 📚 Categorías de Cursos
+## 📚 Rutas de Aprendizaje (8 Semanas)
 
-| Categoría | Descripción |
-|-----------|-------------|
-| **Programación** | Python, JavaScript, Flask, React |
-| **Bases de Datos** | SQL, MySQL, MongoDB |
-| **Redes** | Fundamentos, Cisco, Seguridad en redes |
-| **Ciberseguridad** | Ethical Hacking, Análisis de malware |
-| **Cloud** | AWS, Docker, Kubernetes |
-| **Ciencia de Datos** | Análisis de datos, Machine Learning |
+### ✅ Ruta Principiante
+**Objetivo:** Desarrollar fundamentos sólidos en computación en la nube, habilidades digitales y lógica técnica.
+
+| Semana | Tema | Curso | Mini-Ejercicio |
+|--------|------|-------|----------------|
+| 1 | Fundamentos Digitales | Digital Productivity | Crear calendario de estudio |
+| 2 | Introducción a Google Cloud | GCP Core Infrastructure | Dibujar arquitectura básica |
+| 3 | Computación y Almacenamiento | Compute Engine | Comparar tipos de VM |
+| 4 | Redes Básicas | Networking Fundamentals | VPC vs red local |
+| 5 | Seguridad Básica | Security for Beginners | Política IAM |
+| 6 | Bases de Datos | Introduction to SQL | Crear tabla SQL |
+| 7 | Automatización | Scripting Bash/Python | Script básico |
+| 8 | **Proyecto Final** | - | VM + Firewall + Bucket |
+
+### ✅ Ruta Intermedio
+**Objetivo:** Fortalecer infraestructura, redes, seguridad y operaciones en Google Cloud.
+
+| Semana | Tema | Curso | Mini-Ejercicio |
+|--------|------|-------|----------------|
+| 1 | Infraestructura Avanzada | Compute Engine Deep Dive | Justificar tipos de máquina |
+| 2 | Redes Avanzadas | Networking Advanced | Diagrama red híbrida |
+| 3 | Seguridad y Cumplimiento | IAM Best Practices | Políticas por rol |
+| 4 | Contenedores | Kubernetes on GCP | Componentes de cluster |
+| 5 | Infraestructura como Código | Terraform Basics | Archivo Terraform |
+| 6 | Observabilidad | Monitoring & Logging | Dashboard métricas |
+| 7 | Bases de Datos Cloud | Cloud SQL & Firestore | SQL vs NoSQL |
+| 8 | **Proyecto Final** | - | Arquitectura completa |
+
+### ✅ Ruta Avanzado
+**Objetivo:** Especialización en arquitectura cloud, datos, automatización y soluciones escalables.
+
+| Semana | Tema | Curso | Mini-Ejercicio |
+|--------|------|-------|----------------|
+| 1 | Arquitectura Escalable | Architecting with GCE | Diseño 10K usuarios |
+| 2 | Kubernetes Profesional | GKE Architecture | Namespaces y políticas |
+| 3 | Serverless | Cloud Functions/Run | Pipeline CI/CD |
+| 4 | Data Engineering | Data Engineering GCP | Flujo ETL |
+| 5 | Machine Learning | Vertex AI | Modelo AutoML |
+| 6 | Seguridad Avanzada | Security Engineering | Reglas multi-nivel |
+| 7 | Optimización de Costos | Cost Management | Plan reducción 20-30% |
+| 8 | **Proyecto Final** | - | Solución empresarial |
 
 ## 👔 Perfiles de Carrera
 
-- **Desarrollador Web Full Stack** - Frontend y Backend
-- **Administrador de Redes** - Infraestructura y comunicaciones
-- **Científico de Datos** - Análisis y machine learning
-- **Especialista en Ciberseguridad** - Seguridad informática
-- **Ingeniero Cloud** - Infraestructura en la nube
-- **Administrador de Bases de Datos** - Gestión de datos
+- **Cloud Engineer** - Diseña y gestiona infraestructura en Google Cloud
+- **Cloud Architect** - Diseña soluciones empresariales escalables
+- **Data Engineer** - Diseña y gestiona pipelines de datos
+- **DevOps Engineer** - Automatiza operaciones de desarrollo
+- **Security Engineer** - Implementa seguridad en entornos cloud
 
 ## 💡 Características para Estudiantes que Trabajan
 
-### Microaprendizaje
-Si tienes menos de 5 horas semanales, el agente te sugiere:
-- Sesiones de 30 minutos máximo
-- Técnica Pomodoro (25 min estudio + 5 min descanso)
-- Contenido en pequeñas porciones
+### Formato Micro-Learning
+- **Sesiones de 20-30 minutos** que se adaptan a tu agenda
+- **4 horas por semana** de estudio estructurado
+- **Mini-ejercicios prácticos** en cada semana
 
-### Rutas Rápidas
-Para aprender lo esencial en poco tiempo:
-- Selecciona una categoría
-- Indica las horas totales disponibles
-- Obtén los cursos esenciales que caben en ese tiempo
+### Progreso Medible
+- Marca semanas completadas
+- Visualiza tu porcentaje de avance
+- Proyectos finales para cada nivel
 
 ### Tips de Estudio Incluidos
 - Técnica Pomodoro
-- Práctica activa
-- Espaciado de repetición
-- Microaprendizaje
-- Enseñar para aprender
+- Micro-learning (20-30 min)
+- Práctica activa con ejercicios
+- Documentación del aprendizaje
+- Aprovechamiento de tiempos muertos
 
 ## 📁 Estructura del Proyecto
 
 ```
 Agente-para-estudiantes-de-TI/
 ├── data/
-│   ├── cursos.json          # Matriz de cursos autogestivos
+│   ├── cursos.json          # Matriz de cursos con rutas de 8 semanas
 │   └── base_conocimiento.json # Base de conocimiento para dudas
 ├── src/
 │   ├── __init__.py
 │   ├── agente.py            # Agente principal
-│   ├── generador_rutas.py   # Generador de rutas de aprendizaje
+│   ├── generador_rutas.py   # Generador de rutas estructuradas
 │   ├── asistente_dudas.py   # Asistente de resolución de dudas
 │   ├── data_loader.py       # Carga de datos
 │   └── cli.py               # Interfaz de línea de comandos
-├── tests/
-│   ├── test_agente.py
-│   ├── test_generador_rutas.py
-│   ├── test_asistente_dudas.py
-│   └── test_data_loader.py
+├── tests/                   # 58 pruebas unitarias
 ├── main.py                  # Punto de entrada
 ├── pyproject.toml           # Configuración del proyecto
 └── README.md
@@ -158,7 +168,7 @@ Agente-para-estudiantes-de-TI/
 ## 🧪 Pruebas
 
 ```bash
-# Ejecutar todas las pruebas
+# Ejecutar todas las pruebas (58 tests)
 pytest
 
 # Ejecutar con cobertura
@@ -184,4 +194,4 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 🙏 Agradecimientos
 
-Este proyecto fue creado pensando en todos los estudiantes de TI que trabajan y buscan maneras eficientes de seguir aprendiendo y creciendo profesionalmente.
+Este proyecto fue creado pensando en todos los estudiantes de TI que trabajan y buscan maneras eficientes de seguir aprendiendo y creciendo profesionalmente en el mundo cloud.

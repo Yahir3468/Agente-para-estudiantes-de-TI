@@ -1,5 +1,67 @@
 {
   "temas": {
+    "google_cloud": {
+      "fundamentos": [
+        {
+          "pregunta": "¿Qué es Google Cloud Platform?",
+          "respuesta": "Google Cloud Platform (GCP) es una suite de servicios de computación en la nube que incluye infraestructura, almacenamiento, bases de datos, machine learning y más. Permite crear, desplegar y escalar aplicaciones en la infraestructura de Google."
+        },
+        {
+          "pregunta": "¿Qué es una VPC en Google Cloud?",
+          "respuesta": "VPC (Virtual Private Cloud) es una red virtual privada que te permite definir tu propia topología de red en GCP. Incluye subredes, reglas de firewall y rutas. Cada proyecto tiene una VPC por defecto."
+        },
+        {
+          "pregunta": "¿Qué es Compute Engine?",
+          "respuesta": "Compute Engine es el servicio IaaS de GCP que permite crear y gestionar máquinas virtuales (VMs). Puedes elegir tipo de máquina, sistema operativo, almacenamiento y configurar autoescalado."
+        },
+        {
+          "pregunta": "¿Qué es IAM en Google Cloud?",
+          "respuesta": "IAM (Identity and Access Management) es el sistema de gestión de identidades y accesos de GCP. Define quién (identidad) puede hacer qué (rol) en qué recurso. Sigue el principio de mínimo privilegio."
+        },
+        {
+          "pregunta": "¿Cuál es la diferencia entre regiones y zonas?",
+          "respuesta": "Una región es una ubicación geográfica (ej: us-central1). Una zona es un área de despliegue dentro de una región (ej: us-central1-a). Los recursos se despliegan en zonas específicas para alta disponibilidad."
+        }
+      ],
+      "kubernetes": [
+        {
+          "pregunta": "¿Qué es GKE?",
+          "respuesta": "GKE (Google Kubernetes Engine) es el servicio administrado de Kubernetes en GCP. Gestiona automáticamente el control plane, actualizaciones y escalado, permitiéndote enfocarte en tus aplicaciones."
+        },
+        {
+          "pregunta": "¿Qué es un Pod en Kubernetes?",
+          "respuesta": "Un Pod es la unidad más pequeña desplegable en Kubernetes. Contiene uno o más contenedores que comparten almacenamiento, red y especificaciones de cómo ejecutarse."
+        },
+        {
+          "pregunta": "¿Qué es un Namespace?",
+          "respuesta": "Un Namespace es una forma de dividir recursos del cluster en grupos virtuales. Útil para separar entornos (dev, staging, prod) o equipos dentro del mismo cluster."
+        }
+      ],
+      "seguridad": [
+        {
+          "pregunta": "¿Qué es el principio de mínimo privilegio?",
+          "respuesta": "Es una práctica de seguridad donde se otorgan solo los permisos mínimos necesarios para realizar una tarea. En GCP se implementa mediante roles IAM granulares."
+        },
+        {
+          "pregunta": "¿Qué son las Service Accounts?",
+          "respuesta": "Son identidades para aplicaciones y servicios (no personas). Permiten que las aplicaciones se autentiquen y accedan a recursos de GCP de forma segura."
+        }
+      ],
+      "data": [
+        {
+          "pregunta": "¿Qué es Cloud SQL?",
+          "respuesta": "Cloud SQL es el servicio de bases de datos relacionales administradas de GCP. Soporta MySQL, PostgreSQL y SQL Server. Gestiona backups, replicación y actualizaciones automáticamente."
+        },
+        {
+          "pregunta": "¿Qué es Firestore?",
+          "respuesta": "Firestore es una base de datos NoSQL flexible y escalable. Almacena datos en documentos organizados en colecciones. Ideal para aplicaciones móviles y web con sincronización en tiempo real."
+        },
+        {
+          "pregunta": "¿Qué es BigQuery?",
+          "respuesta": "BigQuery es el data warehouse serverless de GCP. Permite analizar petabytes de datos usando SQL estándar. Ideal para analytics y business intelligence."
+        }
+      ]
+    },
     "programacion": {
       "python": {
         "basico": [
@@ -35,19 +97,15 @@
           }
         ]
       },
-      "javascript": {
+      "bash": {
         "basico": [
           {
-            "pregunta": "¿Qué es el DOM?",
-            "respuesta": "El DOM (Document Object Model) es una representación en memoria de la estructura HTML de una página web. JavaScript puede manipularlo para cambiar contenido, estilos y estructura dinámicamente."
+            "pregunta": "¿Cómo creo un script en Bash?",
+            "respuesta": "Crea un archivo con extensión .sh, inicia con #!/bin/bash en la primera línea, escribe tus comandos y hazlo ejecutable con chmod +x script.sh. Ejecútalo con ./script.sh"
           },
           {
-            "pregunta": "¿Cuál es la diferencia entre let, const y var?",
-            "respuesta": "`var` tiene alcance de función y puede ser redeclarada. `let` tiene alcance de bloque y puede ser reasignada. `const` tiene alcance de bloque y no puede ser reasignada (pero objetos/arrays sí pueden modificarse)."
-          },
-          {
-            "pregunta": "¿Qué son las promesas?",
-            "respuesta": "Las promesas representan operaciones asíncronas. Tienen tres estados: pending (pendiente), fulfilled (cumplida) y rejected (rechazada). Se manejan con .then() y .catch() o async/await."
+            "pregunta": "¿Cómo uso variables en Bash?",
+            "respuesta": "Declara sin espacios: NOMBRE='valor'. Usa con $: echo $NOMBRE. Para variables de entorno usa export: export PATH=$PATH:/nuevo/path"
           }
         ]
       }
@@ -66,6 +124,10 @@
           {
             "pregunta": "¿Cuál es la diferencia entre WHERE y HAVING?",
             "respuesta": "WHERE filtra registros antes de agrupar, HAVING filtra después de agrupar con GROUP BY. WHERE trabaja con filas individuales, HAVING con grupos agregados."
+          },
+          {
+            "pregunta": "¿Cuál es la diferencia entre SQL y NoSQL?",
+            "respuesta": "SQL: bases de datos relacionales, esquema fijo, ACID, ideal para transacciones (ej: MySQL, PostgreSQL). NoSQL: flexible, escalable horizontalmente, ideal para grandes volúmenes y datos no estructurados (ej: MongoDB, Firestore)."
           }
         ]
       }
@@ -83,58 +145,74 @@
         {
           "pregunta": "¿Cuál es la diferencia entre TCP y UDP?",
           "respuesta": "TCP es orientado a conexión, garantiza entrega ordenada y confiable (ideal para web, email). UDP no garantiza entrega ni orden, pero es más rápido (ideal para streaming, gaming)."
-        }
-      ]
-    },
-    "ciberseguridad": {
-      "fundamentos": [
+        },
+        {
+          "pregunta": "¿Qué es una VPN?",
+          "respuesta": "VPN (Virtual Private Network) crea un túnel cifrado entre tu dispositivo y un servidor. En cloud, conecta redes on-premise con la nube de forma segura."
+        },
         {
           "pregunta": "¿Qué es un firewall?",
-          "respuesta": "Es un sistema de seguridad que monitorea y controla el tráfico de red entrante y saliente basándose en reglas de seguridad predefinidas. Puede ser hardware o software."
-        },
-        {
-          "pregunta": "¿Qué es la autenticación de dos factores (2FA)?",
-          "respuesta": "Es un método de seguridad que requiere dos formas de verificación: algo que sabes (contraseña), algo que tienes (teléfono) o algo que eres (biométrico)."
-        },
-        {
-          "pregunta": "¿Qué es el phishing?",
-          "respuesta": "Es un tipo de ataque de ingeniería social donde los atacantes se hacen pasar por entidades legítimas para engañar a las víctimas y obtener información sensible como contraseñas o datos bancarios."
+          "respuesta": "Es un sistema de seguridad que monitorea y controla el tráfico de red entrante y saliente basándose en reglas de seguridad predefinidas. En GCP se configuran como reglas de firewall en la VPC."
         }
       ]
     },
-    "cloud": {
-      "fundamentos": [
+    "contenedores": {
+      "docker": [
         {
-          "pregunta": "¿Qué es IaaS, PaaS y SaaS?",
-          "respuesta": "IaaS (Infrastructure as a Service): proporciona infraestructura virtual (servidores, almacenamiento). PaaS (Platform as a Service): proporciona plataforma de desarrollo. SaaS (Software as a Service): proporciona aplicaciones listas para usar."
+          "pregunta": "¿Qué es Docker?",
+          "respuesta": "Docker es una plataforma de contenedorización que empaqueta aplicaciones con todas sus dependencias. Los contenedores son ligeros, portables y consistentes entre entornos."
         },
         {
-          "pregunta": "¿Qué es un contenedor Docker?",
-          "respuesta": "Es una unidad de software estandarizada que empaqueta código y todas sus dependencias para que la aplicación se ejecute de manera rápida y confiable en diferentes entornos."
+          "pregunta": "¿Qué es una imagen Docker?",
+          "respuesta": "Una imagen es una plantilla inmutable que define un contenedor. Se crea a partir de un Dockerfile y puede almacenarse en registros como Docker Hub o Artifact Registry."
+        },
+        {
+          "pregunta": "¿Qué es un Dockerfile?",
+          "respuesta": "Es un archivo de texto que contiene instrucciones para construir una imagen Docker. Define base image, comandos de instalación, archivos a copiar y comando de inicio."
+        }
+      ]
+    },
+    "automatizacion": {
+      "terraform": [
+        {
+          "pregunta": "¿Qué es Terraform?",
+          "respuesta": "Terraform es una herramienta de Infraestructura como Código (IaC) que permite definir y provisionar infraestructura mediante archivos de configuración declarativos."
+        },
+        {
+          "pregunta": "¿Qué es el estado en Terraform?",
+          "respuesta": "El estado (state) es un archivo que almacena información sobre la infraestructura gestionada. Terraform lo usa para planificar cambios y detectar drift."
         }
       ]
     }
   },
   "tips_estudio": [
     {
+      "titulo": "Micro-learning (20-30 min)",
+      "descripcion": "Divide tu estudio en sesiones cortas de 20-30 minutos. Es más efectivo que maratones largas y se adapta mejor a tu agenda ocupada."
+    },
+    {
       "titulo": "Técnica Pomodoro",
       "descripcion": "Estudia 25 minutos y descansa 5. Cada 4 pomodoros, toma un descanso más largo de 15-30 minutos."
     },
     {
       "titulo": "Práctica activa",
-      "descripcion": "No solo leas, escribe código. La mejor forma de aprender es haciendo proyectos prácticos."
+      "descripcion": "No solo leas, practica con los mini-ejercicios de cada semana. La mejor forma de aprender cloud es haciendo."
     },
     {
-      "titulo": "Microaprendizaje",
-      "descripcion": "Divide el contenido en pequeñas porciones que puedas estudiar en 10-15 minutos durante tus tiempos libres."
+      "titulo": "Completa los mini-ejercicios",
+      "descripcion": "Cada semana tiene un mini-ejercicio práctico. Completarlos refuerza el aprendizaje y prepara para el proyecto final."
     },
     {
       "titulo": "Espaciado de repetición",
       "descripcion": "Repasa el material en intervalos crecientes: después de 1 día, 3 días, 1 semana, 2 semanas."
     },
     {
-      "titulo": "Enseña lo que aprendes",
-      "descripcion": "Explica los conceptos a otros o escribe notas como si fueras a enseñar. Esto refuerza tu comprensión."
+      "titulo": "Documenta tu aprendizaje",
+      "descripcion": "Toma notas y capturas de pantalla de tus ejercicios. Te servirán para el proyecto final y para referencia futura."
+    },
+    {
+      "titulo": "Aprovecha tiempos muertos",
+      "descripcion": "El formato micro-learning te permite estudiar en el transporte, en la fila del banco o durante el almuerzo."
     }
   ]
 }

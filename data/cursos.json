@@ -1,304 +1,628 @@
 {
+  "configuracion": {
+    "horas_por_semana": 4,
+    "formato": "micro-learning",
+    "duracion_actividad_minutos": "20-30",
+    "duracion_ruta_semanas": 8
+  },
   "categorias": [
     {
-      "id": "programacion",
-      "nombre": "Programación",
-      "descripcion": "Cursos de desarrollo de software y lenguajes de programación",
+      "id": "fundamentos_digitales",
+      "nombre": "Fundamentos Digitales",
+      "descripcion": "Habilidades digitales esenciales y productividad",
       "cursos": [
         {
-          "id": "prog-001",
-          "nombre": "Introducción a Python",
-          "nivel": "basico",
-          "duracion_horas": 15,
-          "descripcion": "Fundamentos de programación con Python",
-          "habilidades": ["variables", "estructuras de control", "funciones", "listas"],
+          "id": "fd-001",
+          "nombre": "Digital Productivity",
+          "nivel": "principiante",
+          "duracion_horas": 2,
+          "descripcion": "Gestión de archivos, correo, calendarios y colaboración digital",
+          "habilidades": ["gestión de archivos", "correo electrónico", "calendarios", "colaboración"],
           "requisitos": [],
-          "url": "https://ejemplo.com/python-basico"
-        },
-        {
-          "id": "prog-002",
-          "nombre": "Python Intermedio",
-          "nivel": "intermedio",
-          "duracion_horas": 20,
-          "descripcion": "Programación orientada a objetos y manejo de archivos en Python",
-          "habilidades": ["POO", "archivos", "excepciones", "modulos"],
-          "requisitos": ["prog-001"],
-          "url": "https://ejemplo.com/python-intermedio"
-        },
-        {
-          "id": "prog-003",
-          "nombre": "Desarrollo Web con Flask",
-          "nivel": "intermedio",
-          "duracion_horas": 25,
-          "descripcion": "Creación de aplicaciones web con Flask",
-          "habilidades": ["flask", "apis", "templates", "bases de datos"],
-          "requisitos": ["prog-002"],
-          "url": "https://ejemplo.com/flask"
-        },
-        {
-          "id": "prog-004",
-          "nombre": "JavaScript Básico",
-          "nivel": "basico",
-          "duracion_horas": 18,
-          "descripcion": "Fundamentos de JavaScript para desarrollo web",
-          "habilidades": ["variables", "funciones", "DOM", "eventos"],
-          "requisitos": [],
-          "url": "https://ejemplo.com/javascript-basico"
-        },
-        {
-          "id": "prog-005",
-          "nombre": "React.js Fundamental",
-          "nivel": "intermedio",
-          "duracion_horas": 30,
-          "descripcion": "Desarrollo de interfaces con React",
-          "habilidades": ["componentes", "hooks", "estado", "props"],
-          "requisitos": ["prog-004"],
-          "url": "https://ejemplo.com/react"
+          "actividades": ["Gestión de archivos", "Correo", "Calendarios", "Colaboración"],
+          "mini_ejercicio": "Crear un calendario semanal de estudio en Google Calendar",
+          "semana_ruta": 1,
+          "url": "https://www.cloudskillsboost.google/paths"
         }
       ]
     },
     {
-      "id": "bases_datos",
-      "nombre": "Bases de Datos",
-      "descripcion": "Cursos de diseño y gestión de bases de datos",
+      "id": "google_cloud",
+      "nombre": "Google Cloud Platform",
+      "descripcion": "Cursos de infraestructura y servicios en Google Cloud",
       "cursos": [
         {
-          "id": "bd-001",
-          "nombre": "Fundamentos de Bases de Datos",
-          "nivel": "basico",
-          "duracion_horas": 12,
-          "descripcion": "Conceptos fundamentales de bases de datos relacionales",
-          "habilidades": ["modelo relacional", "normalización", "diagramas ER"],
-          "requisitos": [],
-          "url": "https://ejemplo.com/bd-fundamentos"
+          "id": "gcp-001",
+          "nombre": "Google Cloud Fundamentals: Core Infrastructure",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Conceptos de nube, regiones, máquinas virtuales y almacenamiento",
+          "habilidades": ["conceptos de nube", "regiones", "máquinas virtuales", "almacenamiento"],
+          "requisitos": ["fd-001"],
+          "actividades": ["Conceptos de nube", "Regiones", "VMs", "Almacenamiento"],
+          "mini_ejercicio": "Dibujar arquitectura básica de una app monolítica",
+          "semana_ruta": 2,
+          "url": "https://www.cloudskillsboost.google/course_templates/60"
         },
         {
-          "id": "bd-002",
-          "nombre": "SQL para Principiantes",
-          "nivel": "basico",
-          "duracion_horas": 15,
-          "descripcion": "Consultas y manipulación de datos con SQL",
-          "habilidades": ["SELECT", "INSERT", "UPDATE", "DELETE", "JOINs"],
-          "requisitos": ["bd-001"],
-          "url": "https://ejemplo.com/sql-basico"
+          "id": "gcp-002",
+          "nombre": "Compute Engine: Getting Started",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Crear y configurar máquinas virtuales en Google Cloud",
+          "habilidades": ["Compute Engine", "configuración VM", "tipos de máquina", "consola GCP"],
+          "requisitos": ["gcp-001"],
+          "actividades": ["Crear VM", "Configurar VM", "Comparar tipos"],
+          "mini_ejercicio": "Comparar tipos de VM y sus casos de uso",
+          "semana_ruta": 3,
+          "url": "https://www.cloudskillsboost.google/course_templates/648"
         },
         {
-          "id": "bd-003",
-          "nombre": "MySQL Avanzado",
-          "nivel": "avanzado",
-          "duracion_horas": 20,
-          "descripcion": "Administración y optimización de MySQL",
-          "habilidades": ["índices", "procedimientos almacenados", "triggers", "optimización"],
-          "requisitos": ["bd-002"],
-          "url": "https://ejemplo.com/mysql-avanzado"
+          "id": "gcp-003",
+          "nombre": "Networking in Google Cloud: Fundamentals",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Redes VPC, subnets y reglas básicas de firewall",
+          "habilidades": ["VPC", "subnets", "firewall", "redes en nube"],
+          "requisitos": ["gcp-002"],
+          "actividades": ["Redes VPC", "Subnets", "Reglas de firewall"],
+          "mini_ejercicio": "Identificar diferencias entre VPC y red local",
+          "semana_ruta": 4,
+          "url": "https://www.cloudskillsboost.google/course_templates/35"
         },
         {
-          "id": "bd-004",
-          "nombre": "MongoDB Básico",
+          "id": "gcp-004",
+          "nombre": "Google Cloud Compute Engine Deep Dive",
           "nivel": "intermedio",
-          "duracion_horas": 18,
-          "descripcion": "Bases de datos NoSQL con MongoDB",
-          "habilidades": ["documentos", "colecciones", "consultas", "agregaciones"],
-          "requisitos": ["bd-001"],
-          "url": "https://ejemplo.com/mongodb"
+          "duracion_horas": 4,
+          "descripcion": "Infraestructura avanzada con Compute Engine",
+          "habilidades": ["tipos de máquina avanzados", "preemptible VMs", "grupos de instancias", "autoescalado"],
+          "requisitos": ["gcp-003"],
+          "actividades": ["Tipos de máquina", "Preemptible VMs", "Autoescalado"],
+          "mini_ejercicio": "Elegir 3 tipos de máquina y justificar su uso",
+          "semana_ruta": 1,
+          "url": "https://www.cloudskillsboost.google/course_templates/648"
+        },
+        {
+          "id": "gcp-005",
+          "nombre": "Networking in Google Cloud: Advanced",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "VPN, Cloud Router y VPC Peering",
+          "habilidades": ["VPN", "Cloud Router", "VPC Peering", "redes híbridas"],
+          "requisitos": ["gcp-004"],
+          "actividades": ["VPN", "Cloud Router", "VPC Peering"],
+          "mini_ejercicio": "Crear diagrama de red híbrida",
+          "semana_ruta": 2,
+          "url": "https://www.cloudskillsboost.google/course_templates/36"
+        },
+        {
+          "id": "gcp-006",
+          "nombre": "Architecting with Google Compute Engine",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Arquitectura escalable en Google Cloud",
+          "habilidades": ["arquitectura escalable", "alta disponibilidad", "diseño de soluciones", "patrones de arquitectura"],
+          "requisitos": ["gcp-005", "k8s-002"],
+          "actividades": ["Diseño de arquitectura", "Alta disponibilidad", "Escalabilidad"],
+          "mini_ejercicio": "Diseñar arquitectura para 10,000 usuarios concurrentes",
+          "semana_ruta": 1,
+          "url": "https://www.cloudskillsboost.google/course_templates/50"
         }
       ]
     },
     {
-      "id": "redes",
-      "nombre": "Redes y Comunicaciones",
-      "descripcion": "Cursos de infraestructura de redes",
+      "id": "seguridad_cloud",
+      "nombre": "Seguridad en la Nube",
+      "descripcion": "Cursos de seguridad e identidad en Google Cloud",
       "cursos": [
         {
-          "id": "red-001",
-          "nombre": "Fundamentos de Redes",
-          "nivel": "basico",
-          "duracion_horas": 20,
-          "descripcion": "Conceptos básicos de redes de computadoras",
-          "habilidades": ["TCP/IP", "modelo OSI", "direccionamiento IP", "subnetting"],
-          "requisitos": [],
-          "url": "https://ejemplo.com/redes-fundamentos"
+          "id": "sec-001",
+          "nombre": "Security in Google Cloud for Beginners",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "IAM, roles, permisos y principio de mínimo privilegio",
+          "habilidades": ["IAM", "roles", "permisos", "mínimo privilegio"],
+          "requisitos": ["gcp-003"],
+          "actividades": ["IAM", "Roles", "Permisos", "Políticas"],
+          "mini_ejercicio": "Crear política de acceso para perfil 'estudiante'",
+          "semana_ruta": 5,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         },
         {
-          "id": "red-002",
-          "nombre": "Configuración de Routers y Switches",
+          "id": "sec-002",
+          "nombre": "Cloud IAM & Security Best Practices",
           "nivel": "intermedio",
-          "duracion_horas": 25,
-          "descripcion": "Configuración de equipos de red Cisco",
-          "habilidades": ["CLI Cisco", "VLANs", "routing", "switching"],
-          "requisitos": ["red-001"],
-          "url": "https://ejemplo.com/cisco-basico"
+          "duracion_horas": 4,
+          "descripcion": "Mejores prácticas de seguridad y cumplimiento",
+          "habilidades": ["políticas de seguridad", "cumplimiento", "auditoría", "mejores prácticas"],
+          "requisitos": ["sec-001"],
+          "actividades": ["Políticas", "Cumplimiento", "Auditoría"],
+          "mini_ejercicio": "Crear política de acceso por rol (admin, developer, operador)",
+          "semana_ruta": 3,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         },
         {
-          "id": "red-003",
-          "nombre": "Seguridad en Redes",
+          "id": "sec-003",
+          "nombre": "Security and Identity Engineering on Google Cloud",
           "nivel": "avanzado",
-          "duracion_horas": 30,
-          "descripcion": "Implementación de seguridad en redes",
-          "habilidades": ["firewalls", "VPN", "IDS/IPS", "encriptación"],
-          "requisitos": ["red-002"],
-          "url": "https://ejemplo.com/seguridad-redes"
+          "duracion_horas": 4,
+          "descripcion": "Ingeniería de seguridad e identidad avanzada",
+          "habilidades": ["ingeniería de seguridad", "identidad federada", "seguridad perimetral", "zero trust"],
+          "requisitos": ["sec-002", "k8s-002"],
+          "actividades": ["Seguridad avanzada", "Identidad federada", "Zero trust"],
+          "mini_ejercicio": "Diseñar reglas de seguridad para app con 3 niveles de acceso",
+          "semana_ruta": 6,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         }
       ]
     },
     {
-      "id": "ciberseguridad",
-      "nombre": "Ciberseguridad",
-      "descripcion": "Cursos de seguridad informática",
+      "id": "bases_datos_cloud",
+      "nombre": "Bases de Datos en la Nube",
+      "descripcion": "Cursos de bases de datos SQL y NoSQL en Google Cloud",
       "cursos": [
         {
-          "id": "seg-001",
-          "nombre": "Introducción a la Ciberseguridad",
-          "nivel": "basico",
-          "duracion_horas": 15,
-          "descripcion": "Conceptos fundamentales de seguridad informática",
-          "habilidades": ["amenazas", "vulnerabilidades", "controles de seguridad"],
-          "requisitos": [],
-          "url": "https://ejemplo.com/ciberseguridad-intro"
+          "id": "db-001",
+          "nombre": "Introduction to SQL",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Fundamentos de SQL: SELECT, INSERT, UPDATE, DELETE",
+          "habilidades": ["SELECT", "INSERT", "UPDATE", "DELETE", "consultas básicas"],
+          "requisitos": ["gcp-001"],
+          "actividades": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+          "mini_ejercicio": "Crear tabla 'estudiantes' con 5 registros",
+          "semana_ruta": 6,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         },
         {
-          "id": "seg-002",
-          "nombre": "Ethical Hacking Básico",
+          "id": "db-002",
+          "nombre": "Cloud SQL y Firestore Fundamentals",
           "nivel": "intermedio",
-          "duracion_horas": 35,
-          "descripcion": "Técnicas de hacking ético y pentesting",
-          "habilidades": ["reconocimiento", "escaneo", "explotación", "post-explotación"],
-          "requisitos": ["seg-001", "red-001"],
-          "url": "https://ejemplo.com/ethical-hacking"
-        },
-        {
-          "id": "seg-003",
-          "nombre": "Análisis de Malware",
-          "nivel": "avanzado",
-          "duracion_horas": 40,
-          "descripcion": "Análisis estático y dinámico de malware",
-          "habilidades": ["análisis estático", "análisis dinámico", "ingeniería inversa"],
-          "requisitos": ["seg-002"],
-          "url": "https://ejemplo.com/malware-analysis"
+          "duracion_horas": 4,
+          "descripcion": "Bases de datos administradas: Cloud SQL y Firestore",
+          "habilidades": ["Cloud SQL", "Firestore", "SQL vs NoSQL", "bases de datos administradas"],
+          "requisitos": ["db-001", "sec-002"],
+          "actividades": ["Cloud SQL", "Firestore", "Comparación SQL vs NoSQL"],
+          "mini_ejercicio": "Comparar SQL vs NoSQL (cuándo usar qué)",
+          "semana_ruta": 7,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         }
       ]
     },
     {
-      "id": "cloud",
-      "nombre": "Computación en la Nube",
-      "descripcion": "Cursos de servicios cloud",
+      "id": "automatizacion",
+      "nombre": "Automatización e IaC",
+      "descripcion": "Scripting, automatización e infraestructura como código",
       "cursos": [
         {
-          "id": "cloud-001",
-          "nombre": "Fundamentos de Cloud Computing",
-          "nivel": "basico",
-          "duracion_horas": 12,
-          "descripcion": "Conceptos básicos de computación en la nube",
-          "habilidades": ["IaaS", "PaaS", "SaaS", "modelos de despliegue"],
-          "requisitos": [],
-          "url": "https://ejemplo.com/cloud-fundamentos"
+          "id": "auto-001",
+          "nombre": "Introduction to Scripting (Bash/Python)",
+          "nivel": "principiante",
+          "duracion_horas": 3,
+          "descripcion": "Fundamentos de scripting con Bash y Python",
+          "habilidades": ["Bash", "Python básico", "scripts", "automatización básica"],
+          "requisitos": ["sec-001"],
+          "actividades": ["Scripting Bash", "Scripting Python", "Automatización"],
+          "mini_ejercicio": "Crear script que imprime fecha/hora y crea carpeta",
+          "semana_ruta": 7,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         },
         {
-          "id": "cloud-002",
-          "nombre": "AWS para Principiantes",
+          "id": "auto-002",
+          "nombre": "Google Cloud Deployment Manager / Terraform Basics",
           "nivel": "intermedio",
-          "duracion_horas": 25,
-          "descripcion": "Servicios básicos de Amazon Web Services",
-          "habilidades": ["EC2", "S3", "RDS", "IAM"],
-          "requisitos": ["cloud-001"],
-          "url": "https://ejemplo.com/aws-basico"
-        },
-        {
-          "id": "cloud-003",
-          "nombre": "Docker y Contenedores",
-          "nivel": "intermedio",
-          "duracion_horas": 20,
-          "descripcion": "Containerización con Docker",
-          "habilidades": ["contenedores", "imágenes", "docker-compose", "networking"],
-          "requisitos": ["cloud-001"],
-          "url": "https://ejemplo.com/docker"
-        },
-        {
-          "id": "cloud-004",
-          "nombre": "Kubernetes Básico",
-          "nivel": "avanzado",
-          "duracion_horas": 30,
-          "descripcion": "Orquestación de contenedores con Kubernetes",
-          "habilidades": ["pods", "servicios", "deployments", "ingress"],
-          "requisitos": ["cloud-003"],
-          "url": "https://ejemplo.com/kubernetes"
+          "duracion_horas": 4,
+          "descripcion": "Infraestructura como código con Deployment Manager y Terraform",
+          "habilidades": ["Deployment Manager", "Terraform", "IaC", "templates"],
+          "requisitos": ["auto-001", "gcp-005"],
+          "actividades": ["Deployment Manager", "Terraform", "Templates"],
+          "mini_ejercicio": "Crear archivo de Terraform para una VM",
+          "semana_ruta": 5,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         }
       ]
     },
     {
-      "id": "datos",
-      "nombre": "Ciencia de Datos",
-      "descripcion": "Cursos de análisis y ciencia de datos",
+      "id": "contenedores",
+      "nombre": "Contenedores y Kubernetes",
+      "descripcion": "Containerización y orquestación con Kubernetes",
       "cursos": [
         {
-          "id": "data-001",
-          "nombre": "Introducción al Análisis de Datos",
-          "nivel": "basico",
-          "duracion_horas": 15,
-          "descripcion": "Fundamentos del análisis de datos",
-          "habilidades": ["estadística básica", "visualización", "Excel"],
-          "requisitos": [],
-          "url": "https://ejemplo.com/analisis-datos-intro"
-        },
-        {
-          "id": "data-002",
-          "nombre": "Python para Ciencia de Datos",
+          "id": "k8s-001",
+          "nombre": "Introduction to Kubernetes on Google Cloud",
           "nivel": "intermedio",
-          "duracion_horas": 25,
-          "descripcion": "Análisis de datos con Python, Pandas y NumPy",
-          "habilidades": ["pandas", "numpy", "matplotlib", "limpieza de datos"],
-          "requisitos": ["data-001", "prog-001"],
-          "url": "https://ejemplo.com/python-data-science"
+          "duracion_horas": 4,
+          "descripcion": "Fundamentos de Kubernetes en GKE",
+          "habilidades": ["Kubernetes", "pods", "nodes", "namespaces", "GKE"],
+          "requisitos": ["gcp-005"],
+          "actividades": ["Pods", "Nodes", "Namespaces", "Deployments"],
+          "mini_ejercicio": "Describir los componentes de un cluster (pod, node, namespace)",
+          "semana_ruta": 4,
+          "url": "https://www.cloudskillsboost.google/course_templates/639"
         },
         {
-          "id": "data-003",
-          "nombre": "Machine Learning Básico",
+          "id": "k8s-002",
+          "nombre": "Architecting with Kubernetes on GKE",
           "nivel": "avanzado",
-          "duracion_horas": 40,
-          "descripcion": "Introducción al aprendizaje automático",
-          "habilidades": ["regresión", "clasificación", "clustering", "scikit-learn"],
-          "requisitos": ["data-002"],
-          "url": "https://ejemplo.com/machine-learning"
+          "duracion_horas": 4,
+          "descripcion": "Arquitectura profesional con Kubernetes en GKE",
+          "habilidades": ["arquitectura K8s", "políticas de seguridad", "namespaces avanzados", "networking K8s"],
+          "requisitos": ["k8s-001", "sec-002"],
+          "actividades": ["Namespaces avanzados", "Políticas de seguridad", "Networking"],
+          "mini_ejercicio": "Configurar namespaces y políticas de seguridad",
+          "semana_ruta": 2,
+          "url": "https://www.cloudskillsboost.google/course_templates/639"
+        }
+      ]
+    },
+    {
+      "id": "observabilidad",
+      "nombre": "Observabilidad y Monitoreo",
+      "descripcion": "Monitoreo, logging y gestión de errores",
+      "cursos": [
+        {
+          "id": "obs-001",
+          "nombre": "Monitoring, Logging, and Error Reporting",
+          "nivel": "intermedio",
+          "duracion_horas": 4,
+          "descripcion": "Cloud Monitoring, Logging y Error Reporting",
+          "habilidades": ["Cloud Monitoring", "Cloud Logging", "Error Reporting", "métricas", "dashboards"],
+          "requisitos": ["auto-002"],
+          "actividades": ["Cloud Monitoring", "Cloud Logging", "Dashboards"],
+          "mini_ejercicio": "Plantear un dashboard con 4 métricas críticas",
+          "semana_ruta": 6,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "serverless",
+      "nombre": "Serverless y Microservicios",
+      "descripcion": "Cloud Functions, Cloud Run y arquitecturas serverless",
+      "cursos": [
+        {
+          "id": "sls-001",
+          "nombre": "Developing Serverless Apps (Cloud Functions / Cloud Run)",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Desarrollo de aplicaciones serverless con Cloud Functions y Cloud Run",
+          "habilidades": ["Cloud Functions", "Cloud Run", "serverless", "microservicios", "CI/CD"],
+          "requisitos": ["k8s-002", "obs-001"],
+          "actividades": ["Cloud Functions", "Cloud Run", "CI/CD"],
+          "mini_ejercicio": "Crear pipeline simple de CI/CD",
+          "semana_ruta": 3,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "data_engineering",
+      "nombre": "Data Engineering",
+      "descripcion": "Ingeniería de datos en Google Cloud",
+      "cursos": [
+        {
+          "id": "de-001",
+          "nombre": "Data Engineering on Google Cloud",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Pipelines de datos, ETL y procesamiento en Google Cloud",
+          "habilidades": ["BigQuery", "Dataflow", "ETL", "pipelines de datos", "procesamiento"],
+          "requisitos": ["sls-001", "db-002"],
+          "actividades": ["BigQuery", "Dataflow", "ETL"],
+          "mini_ejercicio": "Crear flujo ETL simple (ingesta → procesamiento → resultado)",
+          "semana_ruta": 4,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "machine_learning",
+      "nombre": "Machine Learning en la Nube",
+      "descripcion": "ML y AI con Vertex AI",
+      "cursos": [
+        {
+          "id": "ml-001",
+          "nombre": "ML for Production with Vertex AI",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Machine Learning en producción con Vertex AI y AutoML",
+          "habilidades": ["Vertex AI", "AutoML", "ML en producción", "modelos", "entrenamiento"],
+          "requisitos": ["de-001"],
+          "actividades": ["Vertex AI", "AutoML", "Entrenamiento de modelos"],
+          "mini_ejercicio": "Entrenar un modelo básico (clásico) con AutoML",
+          "semana_ruta": 5,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
+        }
+      ]
+    },
+    {
+      "id": "costos",
+      "nombre": "Optimización de Costos",
+      "descripcion": "Gestión y optimización de costos en la nube",
+      "cursos": [
+        {
+          "id": "cost-001",
+          "nombre": "Cost Management Fundamentals",
+          "nivel": "avanzado",
+          "duracion_horas": 4,
+          "descripcion": "Fundamentos de gestión y optimización de costos",
+          "habilidades": ["gestión de costos", "optimización", "presupuestos", "alertas", "recomendaciones"],
+          "requisitos": ["ml-001"],
+          "actividades": ["Gestión de costos", "Presupuestos", "Optimización"],
+          "mini_ejercicio": "Crear plan para reducir 20-30% de costos",
+          "semana_ruta": 7,
+          "url": "https://www.cloudskillsboost.google/course_templates/593"
         }
       ]
     }
   ],
+  "rutas_aprendizaje": {
+    "principiante": {
+      "id": "ruta_principiante",
+      "nombre": "Ruta Principiante",
+      "duracion_semanas": 8,
+      "horas_por_semana": 4,
+      "objetivo": "Desarrollar fundamentos sólidos en computación en la nube, habilidades digitales y lógica técnica para cualquier área de TI",
+      "semanas": [
+        {
+          "semana": 1,
+          "titulo": "Fundamentos Digitales",
+          "curso_id": "fd-001",
+          "duracion_sugerida_horas": 2,
+          "actividades": ["Gestión de archivos", "Correo", "Calendarios", "Colaboración"],
+          "mini_ejercicio": "Crear un calendario semanal de estudio en Google Calendar"
+        },
+        {
+          "semana": 2,
+          "titulo": "Introducción a Google Cloud",
+          "curso_id": "gcp-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Conceptos de nube", "Regiones", "Máquinas virtuales", "Almacenamiento"],
+          "mini_ejercicio": "Dibujar arquitectura básica de una app monolítica"
+        },
+        {
+          "semana": 3,
+          "titulo": "Computación y Almacenamiento",
+          "curso_id": "gcp-002",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Crear y configurar una máquina virtual en consola (simulada)"],
+          "mini_ejercicio": "Comparar tipos de VM"
+        },
+        {
+          "semana": 4,
+          "titulo": "Redes Básicas en la Nube",
+          "curso_id": "gcp-003",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Redes VPC", "Subnets", "Reglas básicas de firewall"],
+          "mini_ejercicio": "Identificar diferencias entre VPC y red local"
+        },
+        {
+          "semana": 5,
+          "titulo": "Seguridad Básica",
+          "curso_id": "sec-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["IAM", "Roles", "Permisos", "Principio de mínimo privilegio"],
+          "mini_ejercicio": "Crear política de acceso para perfil 'estudiante'"
+        },
+        {
+          "semana": 6,
+          "titulo": "Introducción a Bases de Datos",
+          "curso_id": "db-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["SELECT", "INSERT", "UPDATE", "DELETE"],
+          "mini_ejercicio": "Crear tabla 'estudiantes' con 5 registros"
+        },
+        {
+          "semana": 7,
+          "titulo": "Automatización básica",
+          "curso_id": "auto-001",
+          "duracion_sugerida_horas": 3,
+          "actividades": ["Scripting Bash", "Scripting Python básico"],
+          "mini_ejercicio": "Script que imprime fecha/hora y crea carpeta"
+        },
+        {
+          "semana": 8,
+          "titulo": "Proyecto Final Principiante",
+          "curso_id": null,
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Crear un entorno simple en GCP: VM + Firewall + bucket"],
+          "mini_ejercicio": "Capturas + explicación de 5 minutos por escrito",
+          "es_proyecto_final": true,
+          "entregables": ["Capturas de pantalla", "Explicación escrita de 5 minutos"]
+        }
+      ]
+    },
+    "intermedio": {
+      "id": "ruta_intermedio",
+      "nombre": "Ruta Intermedio",
+      "duracion_semanas": 8,
+      "horas_por_semana": 4,
+      "objetivo": "Fortalecer infraestructura, redes, seguridad y operaciones en Google Cloud. Ideal para alumnos que ya manejan conceptos básicos",
+      "requisitos_previos": ["ruta_principiante"],
+      "semanas": [
+        {
+          "semana": 1,
+          "titulo": "Infraestructura Avanzada",
+          "curso_id": "gcp-004",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Compute Engine avanzado", "Tipos de máquina", "Autoescalado"],
+          "mini_ejercicio": "Elegir 3 tipos de máquina y justificar su uso"
+        },
+        {
+          "semana": 2,
+          "titulo": "Redes Avanzadas",
+          "curso_id": "gcp-005",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["VPN", "Cloud Router", "VPC Peering"],
+          "mini_ejercicio": "Crear diagrama de red híbrida"
+        },
+        {
+          "semana": 3,
+          "titulo": "Seguridad y Cumplimiento",
+          "curso_id": "sec-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Políticas de seguridad", "Cumplimiento", "Auditoría"],
+          "mini_ejercicio": "Crear política de acceso por rol (admin, developer, operador)"
+        },
+        {
+          "semana": 4,
+          "titulo": "Contenedores",
+          "curso_id": "k8s-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Kubernetes", "Pods", "Nodes", "Namespaces"],
+          "mini_ejercicio": "Describir los componentes de un cluster (pod, node, namespace)"
+        },
+        {
+          "semana": 5,
+          "titulo": "Automatización e Infraestructura como Código",
+          "curso_id": "auto-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Deployment Manager", "Terraform"],
+          "mini_ejercicio": "Crear archivo de Terraform para una VM"
+        },
+        {
+          "semana": 6,
+          "titulo": "Observabilidad",
+          "curso_id": "obs-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Monitoring", "Logging", "Error Reporting"],
+          "mini_ejercicio": "Plantear un dashboard con 4 métricas críticas"
+        },
+        {
+          "semana": 7,
+          "titulo": "Bases de Datos en la Nube",
+          "curso_id": "db-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Cloud SQL", "Firestore", "SQL vs NoSQL"],
+          "mini_ejercicio": "Comparar SQL vs NoSQL (cuándo usar qué)"
+        },
+        {
+          "semana": 8,
+          "titulo": "Proyecto Final Intermedio",
+          "curso_id": null,
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Construir arquitectura: VM backend + Cloud SQL + Balanceador + Log monitoring"],
+          "mini_ejercicio": "Diagrama + checklist de seguridad",
+          "es_proyecto_final": true,
+          "entregables": ["Diagrama de arquitectura", "Checklist de seguridad"],
+          "componentes_proyecto": ["VM backend", "Base de datos Cloud SQL", "Balanceador de carga", "Log monitoring"]
+        }
+      ]
+    },
+    "avanzado": {
+      "id": "ruta_avanzado",
+      "nombre": "Ruta Avanzado",
+      "duracion_semanas": 8,
+      "horas_por_semana": 4,
+      "objetivo": "Especialización en arquitectura en la nube, datos, automatización y soluciones cloud escalables",
+      "requisitos_previos": ["ruta_intermedio"],
+      "semanas": [
+        {
+          "semana": 1,
+          "titulo": "Arquitectura Escalable",
+          "curso_id": "gcp-006",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Diseño de arquitectura escalable", "Alta disponibilidad"],
+          "mini_ejercicio": "Diseñar arquitectura para 10,000 usuarios concurrentes"
+        },
+        {
+          "semana": 2,
+          "titulo": "Kubernetes Profesional",
+          "curso_id": "k8s-002",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Namespaces avanzados", "Políticas de seguridad K8s"],
+          "mini_ejercicio": "Configurar namespaces y políticas de seguridad"
+        },
+        {
+          "semana": 3,
+          "titulo": "Serverless y Microservicios",
+          "curso_id": "sls-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Cloud Functions", "Cloud Run", "CI/CD"],
+          "mini_ejercicio": "Crear pipeline simple de CI/CD"
+        },
+        {
+          "semana": 4,
+          "titulo": "Data Engineering",
+          "curso_id": "de-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["BigQuery", "Dataflow", "Pipelines ETL"],
+          "mini_ejercicio": "Crear flujo ETL simple (ingesta → procesamiento → resultado)"
+        },
+        {
+          "semana": 5,
+          "titulo": "Machine Learning Básico en la Nube",
+          "curso_id": "ml-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Vertex AI", "AutoML", "Entrenamiento de modelos"],
+          "mini_ejercicio": "Entrenar un modelo básico (clásico) con AutoML"
+        },
+        {
+          "semana": 6,
+          "titulo": "Seguridad Avanzada",
+          "curso_id": "sec-003",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Seguridad perimetral", "Zero trust", "Identidad federada"],
+          "mini_ejercicio": "Diseñar reglas de seguridad para app con 3 niveles de acceso"
+        },
+        {
+          "semana": 7,
+          "titulo": "Optimización de Costos",
+          "curso_id": "cost-001",
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Gestión de costos", "Presupuestos", "Recomendaciones"],
+          "mini_ejercicio": "Crear plan para reducir 20-30% de costos"
+        },
+        {
+          "semana": 8,
+          "titulo": "Proyecto Final Avanzado",
+          "curso_id": null,
+          "duracion_sugerida_horas": 4,
+          "actividades": ["Solución empresarial completa"],
+          "mini_ejercicio": "Arquitectura + documentación técnica",
+          "es_proyecto_final": true,
+          "entregables": ["Arquitectura completa", "Documentación técnica"],
+          "componentes_proyecto": ["Cloud Run + API", "Base de datos administrada", "Pipeline de datos", "Monitoreo", "CI/CD"]
+        }
+      ]
+    }
+  },
   "perfiles_carrera": [
     {
-      "id": "desarrollador_web",
-      "nombre": "Desarrollador Web Full Stack",
-      "descripcion": "Desarrolla aplicaciones web completas (frontend y backend)",
-      "cursos_recomendados": ["prog-001", "prog-002", "prog-003", "prog-004", "prog-005", "bd-001", "bd-002"]
+      "id": "cloud_engineer",
+      "nombre": "Cloud Engineer",
+      "descripcion": "Diseña, desarrolla y gestiona infraestructura en Google Cloud",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["gcp-001", "gcp-002", "gcp-003", "gcp-004", "gcp-005", "gcp-006"]
     },
     {
-      "id": "admin_redes",
-      "nombre": "Administrador de Redes",
-      "descripcion": "Gestiona y mantiene la infraestructura de redes",
-      "cursos_recomendados": ["red-001", "red-002", "red-003", "seg-001"]
+      "id": "cloud_architect",
+      "nombre": "Cloud Architect",
+      "descripcion": "Diseña soluciones empresariales escalables en la nube",
+      "rutas_recomendadas": ["intermedio", "avanzado"],
+      "cursos_clave": ["gcp-006", "k8s-002", "sls-001", "de-001", "sec-003"]
     },
     {
-      "id": "cientifico_datos",
-      "nombre": "Científico de Datos",
-      "descripcion": "Analiza grandes volúmenes de datos para extraer insights",
-      "cursos_recomendados": ["prog-001", "prog-002", "bd-001", "bd-002", "data-001", "data-002", "data-003"]
+      "id": "data_engineer",
+      "nombre": "Data Engineer",
+      "descripcion": "Diseña y gestiona pipelines de datos en la nube",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["db-001", "db-002", "de-001", "ml-001"]
     },
     {
-      "id": "especialista_ciberseguridad",
-      "nombre": "Especialista en Ciberseguridad",
-      "descripcion": "Protege sistemas y redes contra amenazas cibernéticas",
-      "cursos_recomendados": ["red-001", "red-002", "seg-001", "seg-002", "seg-003"]
+      "id": "devops_engineer",
+      "nombre": "DevOps Engineer",
+      "descripcion": "Automatiza y gestiona operaciones de desarrollo en la nube",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["auto-001", "auto-002", "k8s-001", "k8s-002", "obs-001", "sls-001"]
     },
     {
-      "id": "ingeniero_cloud",
-      "nombre": "Ingeniero Cloud",
-      "descripcion": "Diseña y gestiona infraestructura en la nube",
-      "cursos_recomendados": ["cloud-001", "cloud-002", "cloud-003", "cloud-004", "red-001"]
-    },
-    {
-      "id": "admin_bd",
-      "nombre": "Administrador de Bases de Datos",
-      "descripcion": "Gestiona y optimiza sistemas de bases de datos",
-      "cursos_recomendados": ["bd-001", "bd-002", "bd-003", "bd-004", "prog-001"]
+      "id": "security_engineer",
+      "nombre": "Security Engineer",
+      "descripcion": "Implementa y gestiona seguridad en entornos cloud",
+      "rutas_recomendadas": ["principiante", "intermedio", "avanzado"],
+      "cursos_clave": ["sec-001", "sec-002", "sec-003", "gcp-003", "gcp-005"]
     }
   ]
 }

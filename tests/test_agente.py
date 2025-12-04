@@ -29,8 +29,8 @@ class TestAgenteEstudiantes:
         """Verifica configuración del perfil de usuario."""
         resultado = agente.configurar_perfil(
             nombre="Test",
-            horas_disponibles_semana=10,
-            objetivo_carrera="desarrollador_web",
+            horas_disponibles_semana=4,
+            objetivo_carrera="cloud_engineer",
             nivel_experiencia="principiante"
         )
         
@@ -41,7 +41,7 @@ class TestAgenteEstudiantes:
         
         # Verificar que se guardó el perfil
         assert agente.perfil_usuario["nombre"] == "Test"
-        assert agente.perfil_usuario["horas_semana"] == 10
+        assert agente.perfil_usuario["horas_semana"] == 4
     
     def test_configurar_perfil_poco_tiempo(self, agente):
         """Verifica recomendaciones para poco tiempo disponible."""
@@ -56,7 +56,7 @@ class TestAgenteEstudiantes:
         """Verifica recomendaciones para mucho tiempo disponible."""
         resultado = agente.configurar_perfil(
             nombre="Intensivo",
-            horas_disponibles_semana=15
+            horas_disponibles_semana=8
         )
         
         assert resultado["ritmo_recomendado"] == "intensivo"
@@ -72,8 +72,8 @@ class TestAgenteEstudiantes:
         """Verifica obtención de ruta con perfil configurado."""
         agente.configurar_perfil(
             nombre="Test",
-            horas_disponibles_semana=10,
-            objetivo_carrera="desarrollador_web"
+            horas_disponibles_semana=4,
+            objetivo_carrera="cloud_engineer"
         )
         
         resultado = agente.obtener_ruta_aprendizaje()
@@ -81,29 +81,44 @@ class TestAgenteEstudiantes:
         assert "error" not in resultado
         assert "ruta" in resultado
     
+    def test_obtener_ruta_estructurada(self, agente):
+        """Verifica obtención de ruta estructurada de 8 semanas."""
+        agente.configurar_perfil(
+            nombre="Test",
+            horas_disponibles_semana=4,
+            nivel_experiencia="principiante"
+        )
+        
+        resultado = agente.obtener_ruta_estructurada()
+        
+        assert "error" not in resultado
+        assert "semanas" in resultado
+        assert len(resultado["semanas"]) == 8
+        assert resultado["horas_por_semana"] == 4
+    
     def test_obtener_ruta_por_habilidades(self, agente):
         """Verifica obtención de ruta por habilidades."""
-        resultado = agente.obtener_ruta_aprendizaje(habilidades=["python", "flask"])
+        resultado = agente.obtener_ruta_aprendizaje(habilidades=["VPC", "IAM"])
         
         assert "error" not in resultado
         assert "ruta" in resultado
     
     def test_obtener_ruta_rapida(self, agente):
         """Verifica obtención de ruta rápida."""
-        resultado = agente.obtener_ruta_rapida("programacion", 15, "basico")
+        resultado = agente.obtener_ruta_rapida("google_cloud", 10, "principiante")
         
         assert "error" not in resultado
         assert "cursos_seleccionados" in resultado
     
     def test_resolver_duda(self, agente):
         """Verifica resolución de duda."""
-        resultado = agente.resolver_duda("¿Qué es Python?")
+        resultado = agente.resolver_duda("¿Qué es Google Cloud?")
         
         assert "encontrado" in resultado or "mensaje" in resultado
     
     def test_obtener_resumen_diario(self, agente):
         """Verifica generación del resumen diario."""
-        agente.configurar_perfil(nombre="Test", horas_disponibles_semana=7)
+        agente.configurar_perfil(nombre="Test", horas_disponibles_semana=4)
         
         resumen = agente.obtener_resumen_diario()
         
@@ -123,38 +138,54 @@ class TestAgenteEstudiantes:
         
         assert len(perfiles) > 0
     
+    def test_listar_rutas_disponibles(self, agente):
+        """Verifica listado de rutas estructuradas disponibles."""
+        rutas = agente.listar_rutas_disponibles()
+        
+        assert len(rutas) == 3  # principiante, intermedio, avanzado
+    
     def test_marcar_curso_completado(self, agente):
         """Verifica marcado de curso como completado."""
-        agente.configurar_perfil(nombre="Test", horas_disponibles_semana=10)
+        agente.configurar_perfil(nombre="Test", horas_disponibles_semana=4)
         
-        resultado = agente.marcar_curso_completado("prog-001")
+        resultado = agente.marcar_curso_completado("gcp-001")
         
         assert resultado["exito"] is True
-        assert "prog-001" in agente.perfil_usuario["cursos_completados"]
+        assert "gcp-001" in agente.perfil_usuario["cursos_completados"]
     
     def test_marcar_curso_completado_duplicado(self, agente):
         """Verifica que no duplica cursos completados."""
-        agente.configurar_perfil(nombre="Test", horas_disponibles_semana=10)
+        agente.configurar_perfil(nombre="Test", horas_disponibles_semana=4)
         
-        agente.marcar_curso_completado("prog-001")
-        resultado = agente.marcar_curso_completado("prog-001")
+        agente.marcar_curso_completado("gcp-001")
+        resultado = agente.marcar_curso_completado("gcp-001")
         
         assert resultado["exito"] is False
+    
+    def test_marcar_semana_completada(self, agente):
+        """Verifica marcado de semana como completada."""
+        agente.configurar_perfil(nombre="Test", horas_disponibles_semana=4)
+        
+        resultado = agente.marcar_semana_completada(1)
+        
+        assert resultado["exito"] is True
+        assert 1 in agente.perfil_usuario["semanas_completadas"]
     
     def test_obtener_progreso(self, agente):
         """Verifica obtención de progreso."""
         agente.configurar_perfil(
             nombre="Test",
-            horas_disponibles_semana=10,
-            objetivo_carrera="desarrollador_web"
+            horas_disponibles_semana=4,
+            objetivo_carrera="cloud_engineer"
         )
-        agente.marcar_curso_completado("prog-001")
+        agente.marcar_curso_completado("gcp-001")
+        agente.marcar_semana_completada(1)
         
         progreso = agente.obtener_progreso()
         
         assert progreso["cursos_completados"] == 1
         assert progreso["horas_invertidas"] > 0
-        assert "objetivo" in progreso
+        assert "ruta_actual" in progreso
 
 
 if __name__ == "__main__":

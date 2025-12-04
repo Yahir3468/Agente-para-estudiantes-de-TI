@@ -143,3 +143,56 @@ def listar_perfiles_carrera() -> List[Dict[str, str]]:
         }
         for perfil in datos["perfiles_carrera"]
     ]
+
+
+def obtener_ruta_aprendizaje(nivel: str) -> Optional[Dict[str, Any]]:
+    """
+    Obtiene una ruta de aprendizaje estructurada por nivel.
+    
+    Args:
+        nivel: Nivel de la ruta (principiante, intermedio, avanzado).
+        
+    Returns:
+        Dict con la ruta de aprendizaje completa o None si no existe.
+    """
+    datos = cargar_cursos()
+    rutas = datos.get("rutas_aprendizaje", {})
+    return rutas.get(nivel)
+
+
+def listar_rutas_aprendizaje() -> List[Dict[str, Any]]:
+    """
+    Lista todas las rutas de aprendizaje disponibles.
+    
+    Returns:
+        Lista con información básica de cada ruta.
+    """
+    datos = cargar_cursos()
+    rutas = datos.get("rutas_aprendizaje", {})
+    return [
+        {
+            "id": ruta["id"],
+            "nombre": ruta["nombre"],
+            "nivel": nivel,
+            "duracion_semanas": ruta["duracion_semanas"],
+            "horas_por_semana": ruta["horas_por_semana"],
+            "objetivo": ruta["objetivo"]
+        }
+        for nivel, ruta in rutas.items()
+    ]
+
+
+def obtener_configuracion() -> Dict[str, Any]:
+    """
+    Obtiene la configuración general de las rutas.
+    
+    Returns:
+        Dict con configuración (horas por semana, formato, etc.).
+    """
+    datos = cargar_cursos()
+    return datos.get("configuracion", {
+        "horas_por_semana": 4,
+        "formato": "micro-learning",
+        "duracion_actividad_minutos": "20-30",
+        "duracion_ruta_semanas": 8
+    })

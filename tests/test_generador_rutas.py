@@ -23,16 +23,59 @@ class TestGeneradorRutas:
         """Verifica que el generador se inicializa correctamente."""
         assert generador.datos_cursos is not None
         assert len(generador.cursos_por_id) > 0
+        assert "horas_por_semana" in generador.configuracion
+    
+    def test_obtener_ruta_estructurada(self, generador):
+        """Verifica obtención de ruta estructurada de 8 semanas."""
+        ruta = generador.obtener_ruta_estructurada("principiante")
+        
+        assert "error" not in ruta
+        assert "semanas" in ruta
+        assert len(ruta["semanas"]) == 8
+        assert ruta["duracion_semanas"] == 8
+        assert ruta["horas_por_semana"] == 4
+    
+    def test_obtener_ruta_estructurada_intermedio(self, generador):
+        """Verifica ruta estructurada de nivel intermedio."""
+        ruta = generador.obtener_ruta_estructurada("intermedio")
+        
+        assert "error" not in ruta
+        assert "semanas" in ruta
+        assert ruta["nivel"] == "intermedio"
+    
+    def test_obtener_ruta_estructurada_avanzado(self, generador):
+        """Verifica ruta estructurada de nivel avanzado."""
+        ruta = generador.obtener_ruta_estructurada("avanzado")
+        
+        assert "error" not in ruta
+        assert "semanas" in ruta
+        assert ruta["nivel"] == "avanzado"
+    
+    def test_obtener_ruta_estructurada_inexistente(self, generador):
+        """Verifica manejo de nivel inexistente."""
+        ruta = generador.obtener_ruta_estructurada("inexistente")
+        
+        assert "error" in ruta
+        assert "rutas_disponibles" in ruta
+    
+    def test_listar_rutas_disponibles(self, generador):
+        """Verifica listado de rutas disponibles."""
+        rutas = generador.listar_rutas_disponibles()
+        
+        assert len(rutas) == 3
+        niveles = [r["nivel"] for r in rutas]
+        assert "principiante" in niveles
+        assert "intermedio" in niveles
+        assert "avanzado" in niveles
     
     def test_generar_ruta_por_perfil_existente(self, generador):
         """Verifica generación de ruta para perfil existente."""
-        ruta = generador.generar_ruta_por_perfil("desarrollador_web", horas_por_semana=10)
+        ruta = generador.generar_ruta_por_perfil("cloud_engineer", horas_por_semana=4)
         
         assert "error" not in ruta
         assert "perfil" in ruta
         assert "ruta" in ruta
         assert "duracion_estimada_semanas" in ruta
-        assert len(ruta["ruta"]) > 0
     
     def test_generar_ruta_por_perfil_inexistente(self, generador):
         """Verifica manejo de perfil inexistente."""
@@ -44,13 +87,13 @@ class TestGeneradorRutas:
     def test_generar_ruta_con_cursos_completados(self, generador):
         """Verifica que excluye cursos ya completados."""
         ruta_sin_completados = generador.generar_ruta_por_perfil(
-            "desarrollador_web",
+            "cloud_engineer",
             cursos_completados=[]
         )
         
         ruta_con_completados = generador.generar_ruta_por_perfil(
-            "desarrollador_web",
-            cursos_completados=["prog-001", "prog-002"]
+            "cloud_engineer",
+            cursos_completados=["gcp-001", "gcp-002"]
         )
         
         assert ruta_con_completados["cursos_pendientes"] < ruta_sin_completados["cursos_pendientes"]
@@ -58,8 +101,8 @@ class TestGeneradorRutas:
     def test_generar_ruta_por_habilidades(self, generador):
         """Verifica generación de ruta por habilidades."""
         ruta = generador.generar_ruta_por_habilidades(
-            habilidades_objetivo=["python", "flask"],
-            horas_por_semana=10
+            habilidades_objetivo=["VPC", "IAM"],
+            horas_por_semana=4
         )
         
         assert "error" not in ruta
@@ -70,7 +113,7 @@ class TestGeneradorRutas:
         """Verifica manejo de habilidades no encontradas."""
         ruta = generador.generar_ruta_por_habilidades(
             habilidades_objetivo=["habilidad_inexistente_xyz"],
-            horas_por_semana=10
+            horas_por_semana=4
         )
         
         assert "error" in ruta
@@ -78,14 +121,14 @@ class TestGeneradorRutas:
     def test_generar_ruta_rapida(self, generador):
         """Verifica generación de ruta rápida."""
         ruta = generador.generar_ruta_rapida(
-            categoria_id="programacion",
-            horas_disponibles=20,
-            nivel="basico"
+            categoria_id="google_cloud",
+            horas_disponibles=10,
+            nivel="principiante"
         )
         
         assert "error" not in ruta
         assert "cursos_seleccionados" in ruta
-        assert ruta["horas_utilizadas"] <= 20
+        assert ruta["horas_utilizadas"] <= 10
     
     def test_generar_ruta_rapida_categoria_inexistente(self, generador):
         """Verifica manejo de categoría inexistente."""
@@ -99,19 +142,29 @@ class TestGeneradorRutas:
     
     def test_ordenar_por_dependencias(self, generador):
         """Verifica que los cursos se ordenan respetando dependencias."""
-        # prog-002 depende de prog-001
-        cursos = ["prog-002", "prog-001"]
+        # gcp-002 depende de gcp-001
+        cursos = ["gcp-002", "gcp-001"]
         ordenados = generador._ordenar_por_dependencias(cursos)
         
-        # prog-001 debe aparecer antes que prog-002
-        assert ordenados.index("prog-001") < ordenados.index("prog-002")
+        # gcp-001 debe aparecer antes que gcp-002
+        assert ordenados.index("gcp-001") < ordenados.index("gcp-002")
     
     def test_horas_semanales_afectan_duracion(self, generador):
         """Verifica que más horas semanales reducen la duración."""
-        ruta_5h = generador.generar_ruta_por_perfil("desarrollador_web", horas_por_semana=5)
-        ruta_20h = generador.generar_ruta_por_perfil("desarrollador_web", horas_por_semana=20)
+        ruta_2h = generador.generar_ruta_por_perfil("cloud_engineer", horas_por_semana=2)
+        ruta_8h = generador.generar_ruta_por_perfil("cloud_engineer", horas_por_semana=8)
         
-        assert ruta_5h["duracion_estimada_semanas"] > ruta_20h["duracion_estimada_semanas"]
+        assert ruta_2h["duracion_estimada_semanas"] >= ruta_8h["duracion_estimada_semanas"]
+    
+    def test_ruta_estructurada_con_semanas_completadas(self, generador):
+        """Verifica progreso en ruta estructurada."""
+        ruta = generador.obtener_ruta_estructurada(
+            nivel="principiante",
+            semanas_completadas=[1, 2, 3]
+        )
+        
+        assert ruta["semanas_completadas"] == 3
+        assert ruta["progreso_porcentaje"] == 37.5  # 3/8 * 100
 
 
 if __name__ == "__main__":

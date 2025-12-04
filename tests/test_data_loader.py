@@ -21,6 +21,7 @@ class TestDataLoader:
         
         assert "categorias" in datos
         assert "perfiles_carrera" in datos
+        assert "rutas_aprendizaje" in datos
         assert len(datos["categorias"]) > 0
         assert len(datos["perfiles_carrera"]) > 0
     
@@ -34,10 +35,10 @@ class TestDataLoader:
     
     def test_obtener_curso_por_id_existente(self):
         """Verifica que se obtiene un curso existente por ID."""
-        curso = data_loader.obtener_curso_por_id("prog-001")
+        curso = data_loader.obtener_curso_por_id("gcp-001")
         
         assert curso is not None
-        assert curso["id"] == "prog-001"
+        assert curso["id"] == "gcp-001"
         assert "nombre" in curso
         assert "categoria" in curso
     
@@ -49,7 +50,7 @@ class TestDataLoader:
     
     def test_obtener_cursos_por_categoria(self):
         """Verifica que se obtienen cursos por categoría."""
-        cursos = data_loader.obtener_cursos_por_categoria("programacion")
+        cursos = data_loader.obtener_cursos_por_categoria("google_cloud")
         
         assert len(cursos) > 0
         assert all("id" in c for c in cursos)
@@ -63,12 +64,12 @@ class TestDataLoader:
     
     def test_obtener_cursos_por_nivel(self):
         """Verifica que se obtienen cursos por nivel."""
-        cursos_basicos = data_loader.obtener_cursos_por_nivel("basico")
+        cursos_principiante = data_loader.obtener_cursos_por_nivel("principiante")
         cursos_intermedios = data_loader.obtener_cursos_por_nivel("intermedio")
         cursos_avanzados = data_loader.obtener_cursos_por_nivel("avanzado")
         
-        assert len(cursos_basicos) > 0
-        assert all(c["nivel"] == "basico" for c in cursos_basicos)
+        assert len(cursos_principiante) > 0
+        assert all(c["nivel"] == "principiante" for c in cursos_principiante)
         
         assert len(cursos_intermedios) > 0
         assert all(c["nivel"] == "intermedio" for c in cursos_intermedios)
@@ -78,12 +79,12 @@ class TestDataLoader:
     
     def test_obtener_perfil_carrera_existente(self):
         """Verifica que se obtiene un perfil de carrera existente."""
-        perfil = data_loader.obtener_perfil_carrera("desarrollador_web")
+        perfil = data_loader.obtener_perfil_carrera("cloud_engineer")
         
         assert perfil is not None
-        assert perfil["id"] == "desarrollador_web"
+        assert perfil["id"] == "cloud_engineer"
         assert "nombre" in perfil
-        assert "cursos_recomendados" in perfil
+        assert "cursos_clave" in perfil
     
     def test_obtener_perfil_carrera_inexistente(self):
         """Verifica que retorna None para perfil inexistente."""
@@ -108,6 +109,29 @@ class TestDataLoader:
         assert all("id" in p for p in perfiles)
         assert all("nombre" in p for p in perfiles)
         assert all("descripcion" in p for p in perfiles)
+    
+    def test_obtener_ruta_aprendizaje(self):
+        """Verifica que se obtiene una ruta de aprendizaje."""
+        ruta = data_loader.obtener_ruta_aprendizaje("principiante")
+        
+        assert ruta is not None
+        assert "semanas" in ruta
+        assert len(ruta["semanas"]) == 8
+    
+    def test_listar_rutas_aprendizaje(self):
+        """Verifica que se listan las rutas de aprendizaje."""
+        rutas = data_loader.listar_rutas_aprendizaje()
+        
+        assert len(rutas) == 3  # principiante, intermedio, avanzado
+        assert all("nivel" in r for r in rutas)
+        assert all("duracion_semanas" in r for r in rutas)
+    
+    def test_obtener_configuracion(self):
+        """Verifica que se obtiene la configuración."""
+        config = data_loader.obtener_configuracion()
+        
+        assert "horas_por_semana" in config
+        assert config["horas_por_semana"] == 4
 
 
 if __name__ == "__main__":
